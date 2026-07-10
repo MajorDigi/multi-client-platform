@@ -58,6 +58,16 @@ This project is built using a structured multi-agent process, not ad-hoc changes
 - No agent re-litigates decisions already recorded in `SOURCE_OF_TRUTH.md`'s Decisions Log; unclear or conflicting situations get escalated back to the PM Agent, not resolved unilaterally.
 - Claude Code is treated as running in **approval mode only** for this project: every file write is expected to be reviewed by the developer before being applied — do not treat prior approvals as blanket authorization for unattended/autonomous changes.
 
+## Security — secrets must never reach GitHub
+
+This is a hard rule, not a suggestion:
+
+- Never commit `.env` files (`.env`, `.env.local`, `.env.production`, etc.), API keys, passwords, connection strings, Azure credentials, MySQL credentials, or any other secret material to this repository.
+- Before running any `git commit`, check the staged diff for exposed secrets (credentials, tokens, private keys, connection strings) and stop to flag it instead of committing if anything looks like a secret.
+- Config that includes real secrets belongs in untracked local files (`.env`) or Azure/IIS-side configuration on the VM — never in tracked source, docs, or commit messages.
+- If a secret is ever accidentally committed, treat it as compromised (rotate/revoke it) rather than just deleting it from the latest commit — it remains in git history.
+- Rely on `.gitignore` to keep secret-shaped files untracked, but don't treat `.gitignore` alone as sufficient — still check diffs before committing, since a secret can be pasted into a tracked file.
+
 ## Updating SOURCE_OF_TRUTH.md
 
 Significant decisions and phase completions are expected to be recorded in `SOURCE_OF_TRUTH.md`'s Decisions Log and Phase Status table (this is the PM Agent's job per the roster above). If you make or observe a locked decision or complete a phase gate, update the relevant table there rather than leaving it only in chat/commit history.
