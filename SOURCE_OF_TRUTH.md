@@ -122,7 +122,19 @@ MySQL (data layer — returns data to Node only)
 
 ---
 
-## 8. Phase Definitions
+## 8. GitHub URL Standards
+
+Always use `raw.githubusercontent.com` URLs when referencing GitHub files in agent prompts. The blob URL format (`github.com/user/repo/blob/main/file`) returns 404 for Claude's fetch tool. The correct format is:
+
+```
+https://raw.githubusercontent.com/MajorDigi/multi-client-platform/main/FILENAME.md
+```
+
+Example: `SOURCE_OF_TRUTH.md` is accessed at `https://raw.githubusercontent.com/MajorDigi/multi-client-platform/main/SOURCE_OF_TRUTH.md`
+
+---
+
+## 9. Phase Definitions
 
 ### Phase 1 — Static Hosting
 **Builder:** Phase 1 Builder (Agent 3)
@@ -148,7 +160,7 @@ MySQL (data layer — returns data to Node only)
 
 ---
 
-## 9. Handoff Protocol
+## 10. Handoff Protocol
 
 Every phase follows this exact sequence before the next phase begins:
 
@@ -170,7 +182,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 10. Decisions Log
+## 11. Decisions Log
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
@@ -185,7 +197,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 11. Open Questions
+## 12. Open Questions
 
 | # | Question | Owner | Status |
 |---|----------|-------|--------|
@@ -193,7 +205,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 12. Phase Status
+## 13. Phase Status
 
 | Phase | Status |
 |-------|--------|

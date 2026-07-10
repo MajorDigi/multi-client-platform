@@ -69,6 +69,16 @@ This is a hard rule, not a suggestion:
 - If a secret is ever accidentally committed, treat it as compromised (rotate/revoke it) rather than just deleting it from the latest commit — it remains in git history.
 - Rely on `.gitignore` to keep secret-shaped files untracked, but don't treat `.gitignore` alone as sufficient — still check diffs before committing, since a secret can be pasted into a tracked file.
 
+## GitHub URL Standards
+
+Always use `raw.githubusercontent.com` URLs when referencing GitHub files in agent prompts. The blob URL format (`github.com/user/repo/blob/main/file`) returns 404 for Claude's fetch tool. The correct format is:
+
+```
+https://raw.githubusercontent.com/MajorDigi/multi-client-platform/main/FILENAME.md
+```
+
+Example: `SOURCE_OF_TRUTH.md` is accessed at `https://raw.githubusercontent.com/MajorDigi/multi-client-platform/main/SOURCE_OF_TRUTH.md`
+
 ## Updating SOURCE_OF_TRUTH.md
 
 Significant decisions and phase completions are expected to be recorded in `SOURCE_OF_TRUTH.md`'s Decisions Log and Phase Status table (this is the PM Agent's job per the roster above). If you make or observe a locked decision or complete a phase gate, update the relevant table there rather than leaving it only in chat/commit history.
