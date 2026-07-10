@@ -57,6 +57,7 @@ This project is built using a structured multi-agent process, not ad-hoc changes
 - The Code Review Agent activates starting Phase 2 (Phase 1 is static config with minimal code to review).
 - No agent re-litigates decisions already recorded in `SOURCE_OF_TRUTH.md`'s Decisions Log; unclear or conflicting situations get escalated back to the PM Agent, not resolved unilaterally.
 - Claude Code is treated as running in **approval mode only** for this project: every file write is expected to be reviewed by the developer before being applied — do not treat prior approvals as blanket authorization for unattended/autonomous changes.
+- **No agent commits directly to GitHub.** Agents (BA/UX, PM, Builders, Assembler, QA, Documentation, Code Review) produce documents and code in chat only. The developer saves those files locally in VS Code. Claude Code is the sole GitHub bridge: it receives the files produced in agent chat sessions, commits them, and pushes to GitHub. Do not push on behalf of an agent role without the developer explicitly directing the commit/push here.
 
 ## Security — secrets must never reach GitHub
 

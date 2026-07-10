@@ -91,6 +91,7 @@ MySQL (data layer — returns data to Node only)
 6. The Assembler cannot sign off on a phase until QA has tested it
 7. No agent re-litigates decisions already recorded in this document
 8. If something is unclear or conflicts with this document, return to the PM Agent
+9. No agent commits directly to GitHub. Agents produce documents and code in chat. The developer saves files locally in VS Code. Claude Code handles all commits and pushes to GitHub.
 
 ---
 
