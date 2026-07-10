@@ -209,7 +209,8 @@ No exceptions. No skipping steps.
 
 | Phase | Status |
 |-------|--------|
-| Environment Setup (Kickoff) | ⬜ Not Started |
+| Pre-Kickoff Documentation | ✅ Complete |
+| Environment Setup (Kickoff) | 🟡 In Progress |
 | BA/UX Spec | ⬜ Not Started |
 | Phase 1 — Static Hosting | ⬜ Not Started |
 | Phase 2 — API + Reverse Proxy | ⬜ Not Started |
