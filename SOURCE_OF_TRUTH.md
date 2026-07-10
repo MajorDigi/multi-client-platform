@@ -1,6 +1,6 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
-**Maintained by:** Project Manager Agent (Agent 1)
+**Maintained by:** Project Manager Agent (Agent 2)
 **Last Updated:** 2026-07-07
 **Status:** Pre-Kickoff
 
