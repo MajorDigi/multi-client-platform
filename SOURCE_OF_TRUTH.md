@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-07-07
+**Last Updated:** 2026-07-09
 **Status:** Pre-Kickoff
 
 ---
@@ -194,6 +194,8 @@ No exceptions. No skipping steps.
 | 2026-07-07 | Documentation gates every phase | No phase starts until previous phase is fully documented |
 | 2026-07-07 | Code Review Agent activates in Phase 2 | Phase 1 is config/static files, minimal code to review |
 | 2026-07-07 | Azure VM chosen over AWS EC2 and Vultr | Developer already uses Azure at work, familiar with portal, 12-month free tier, Windows-native ecosystem for IIS |
+| 2026-07-09 | GitHub MCP connector not used | No GitHub MCP connector exists in Claude connector directory. Claude Code serves as sole GitHub bridge, preserving approval-mode review on every commit. |
+| 2026-07-09 | Raw URL standard established | blob URL format returns 404 for Claude fetch tool. All agent prompts must use raw.githubusercontent.com format. |
 
 ---
 
