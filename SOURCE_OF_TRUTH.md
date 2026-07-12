@@ -92,6 +92,7 @@ MySQL (data layer — returns data to Node only)
 7. No agent re-litigates decisions already recorded in this document
 8. If something is unclear or conflicts with this document, return to the PM Agent
 9. No agent commits directly to GitHub. Agents produce documents and code in chat. The developer saves files locally in VS Code. Claude Code handles all commits and pushes to GitHub.
+10. Agent 1 (BA/UX) scope boundary: BA/UX owns the application layer only — client data isolation, API query logic, display configuration, data upload flow, and application-level technical constraints. Infrastructure decisions — server, OS, IIS, networking, provisioning, hosting provider — belong to PM and Kickoff only. BA/UX does not cross into infrastructure territory.
 
 ---
 
