@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-07-09
+**Last Updated:** 2026-07-12
 **Status:** Pre-Kickoff
 
 ---
@@ -197,6 +197,8 @@ No exceptions. No skipping steps.
 | 2026-07-07 | Azure VM chosen over AWS EC2 and Vultr | Developer already uses Azure at work, familiar with portal, 12-month free tier, Windows-native ecosystem for IIS |
 | 2026-07-09 | GitHub MCP connector not used | No GitHub MCP connector exists in Claude connector directory. Claude Code serves as sole GitHub bridge, preserving approval-mode review on every commit. |
 | 2026-07-09 | Raw URL standard established | blob URL format returns 404 for Claude fetch tool. All agent prompts must use raw.githubusercontent.com format. |
+| 2026-07-12 | Flexible question-bank schema chosen | Questions and options stored as rows not fixed columns — avoids schema migrations as client response sheets evolve |
+| 2026-07-12 | Data integrity approach locked | Application-level API enforcement for finalized records plus soft delete pattern — status column tracks active/finalized/archived, nothing hard deleted |
 
 ---
 
@@ -214,7 +216,7 @@ No exceptions. No skipping steps.
 |-------|--------|
 | Pre-Kickoff Documentation | ✅ Complete |
 | Environment Setup (Kickoff) | 🟡 In Progress |
-| BA/UX Spec | ⬜ Not Started |
+| BA/UX Spec | ✅ Complete |
 | Phase 1 — Static Hosting | ⬜ Not Started |
 | Phase 2 — API + Reverse Proxy | ⬜ Not Started |
 | Phase 3 — Auth + TLS + Public Link | ⬜ Not Started |
