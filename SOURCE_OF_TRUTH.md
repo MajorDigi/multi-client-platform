@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-07-12
+**Last Updated:** 2026-07-13
 **Status:** Pre-Kickoff
 
 ---
@@ -13,7 +13,7 @@
 
 ## 1. Project Overview
 
-A multi-client web platform that aggregates, organizes, and displays data for multiple clients through a single hosted system. Each client has their own data pipeline and display dashboard. The platform is built once and extended per client.
+A multi-client web platform that aggregates, organizes, and displays data for multiple clients through a single hosted system. All clients share one data pipeline and one dashboard, which renders dynamically based on each client's engagement data. The platform is built once and reused across every client, not extended or rebuilt per client.
 
 **First client:** LIFT The Tri-State (workforce development program, operated through FreeStore Food Bank, Cincinnati OH)
 
@@ -36,10 +36,10 @@ This is not a LIFT-specific application. LIFT is a client of the platform. The p
 |-------|-----------|------|
 | Local Dev | VS Code + Claude Code CLI (approval mode) | Where code is written and reviewed |
 | Version Control | GitHub | Bridge between local and server, source of truth for all agents |
-| Server | Azure Virtual Machine (Windows Server) | Hosts everything, publicly accessible, 12-month free tier |
+| Server | AWS Lightsail (Windows Server 2022) | Hosts everything, publicly accessible, $22/month flat rate, Ohio us-east-2a |
 | Web Server | IIS + URL Rewrite + ARR | Front door, serves Angular app, reverse proxies to Node |
 | API | Node.js + Express | Business logic, queries MySQL, never exposed directly |
-| Database | MySQL | Data storage on Azure VM, only Node talks to it |
+| Database | MySQL | Data storage on AWS Lightsail VM, only Node talks to it |
 | Frontend | Angular + TypeScript + Tailwind CSS | What the user sees, served as static files by IIS |
 
 ### How Components Talk To Each Other
@@ -199,6 +199,14 @@ No exceptions. No skipping steps.
 | 2026-07-09 | Raw URL standard established | blob URL format returns 404 for Claude fetch tool. All agent prompts must use raw.githubusercontent.com format. |
 | 2026-07-12 | Flexible question-bank schema chosen | Questions and options stored as rows not fixed columns — avoids schema migrations as client response sheets evolve |
 | 2026-07-12 | Data integrity approach locked | Application-level API enforcement for finalized records plus soft delete pattern — status column tracks active/finalized/archived, nothing hard deleted |
+| 2026-07-12 | Two user types only — Admin shared credentials and public Viewer no login | Data is non-sensitive and operator-owned; avoids building client account infrastructure in V1 |
+| 2026-07-12 | Export is public no auth required | Consistent with open Viewer model; no sensitive data at risk |
+| 2026-07-12 | Rule-based auto-narrative for multiple choice questions, quote cards for open text | Avoids manual per-engagement writing and AI generation cost and risk |
+| 2026-07-12 | Cross-engagement and cross-client aggregation in V1 | Minimal added query complexity, core to proof across industries value proposition |
+| 2026-07-12 | QR code self-entry explicitly out of V1 | Avoids public write endpoints, abuse protection complexity, and second entry UX in V1 |
+| 2026-07-12 | Client defined as contracting organization, attendees are anonymous respondents, no PII | No PII by design, sanitization enforced structurally at entry |
+| 2026-07-12 | Azure abandoned, Kamatera abandoned, AWS Lightsail selected | Azure hit Free Trial quota restrictions, Kamatera Windows licensing added $19/month making total $58/month, Lightsail at $40/month flat with Windows included and no quota friction |
+| 2026-07-12 | Ohio region selected over N. Virginia | Developer located in Cincinnati, Ohio is physically closer, lower latency, no functional downside |
 
 ---
 
@@ -206,7 +214,7 @@ No exceptions. No skipping steps.
 
 | # | Question | Owner | Status |
 |---|----------|-------|--------|
-| 1 | BA/UX spec — V1 feature set | BA/UX Agent | Pending Kickoff |
+| 1 | BA/UX spec — V1 feature set | BA/UX Agent | ✅ Closed — BA-UX-SPEC.md and ARCHITECTURE-BRIEF.md committed to GitHub |
 
 ---
 
