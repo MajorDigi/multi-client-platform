@@ -205,7 +205,7 @@ No exceptions. No skipping steps.
 | 2026-07-12 | Cross-engagement and cross-client aggregation in V1 | Minimal added query complexity, core to proof across industries value proposition |
 | 2026-07-12 | QR code self-entry explicitly out of V1 | Avoids public write endpoints, abuse protection complexity, and second entry UX in V1 |
 | 2026-07-12 | Client defined as contracting organization, attendees are anonymous respondents, no PII | No PII by design, sanitization enforced structurally at entry |
-| 2026-07-12 | Azure abandoned, Kamatera abandoned, AWS Lightsail selected | Azure hit Free Trial quota restrictions, Kamatera Windows licensing added $19/month making total $58/month, Lightsail at $40/month flat with Windows included and no quota friction |
+| 2026-07-12 | Azure abandoned, Kamatera abandoned, AWS Lightsail selected | Azure hit Free Trial quota restrictions, Kamatera Windows licensing added $19/month making total $58/month, Lightsail at $22/month flat with Windows included and no quota friction |
 | 2026-07-12 | Ohio region selected over N. Virginia | Developer located in Cincinnati, Ohio is physically closer, lower latency, no functional downside |
 
 ---
