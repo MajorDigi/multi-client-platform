@@ -41,7 +41,7 @@ Browser → IIS (serves Angular, proxies /api/* to Node) → Node/Express → My
 
 ## Planned repository layout
 
-Once phases begin, code is expected to land under this structure (see `SOURCE_OF_TRUTH.md` §8 for the canonical version):
+Once phases begin, code is expected to land under this structure (see `SOURCE_OF_TRUTH.md` §9 for the canonical version):
 
 ```
 /docs                  ← BA/UX spec and phase-completion docs

@@ -115,7 +115,37 @@ No agent proceeds with any work until this check is complete and reported. This 
 
 ---
 
-## 7. Claude Code Rules
+## 7. PM Radar
+
+The PM Radar is a live working list maintained by the PM Agent. It captures items that are not done and not yet reflected in the Phase Status table — open loose ends, blockers, pending actions, and anything that needs attention before it falls through the cracks.
+
+### Radar States
+- 🔴 **Items on radar** — live list, actively maintained by PM
+- ✅ **Radar clear** — all items resolved, explicitly declared by PM with date, section updated to reflect closure
+- 📁 **Radar closed** — end of project, Documentation Agent captures full radar history in project completion report
+
+### PM Responsibility
+When the last radar item is resolved the PM Agent flags it explicitly in chat before updating this document. The radar is never silently emptied. Closure is always declared, dated, and recorded.
+
+### Cleared Radar Format
+When all items are resolved this section updates to:
+"Status: ✅ Clear as of [date]. No open items. All previously tracked items resolved and documented."
+
+The section is never deleted — cleared state is preserved as a record that items were tracked and intentionally closed, not abandoned.
+
+### Current Radar Status
+🔴 Items on radar as of 2026-07-13
+
+| # | Item | Owner | Notes |
+|---|------|-------|-------|
+| 1 | Kickoff — resume at RDP connection test | Agent 0 | Then IIS, Node.js, MySQL, public accessibility, pre-flight checklist committed to GitHub |
+| 2 | Kamatera $10 security deposit | Developer | Reclaim from Kamatera billing console before forgotten |
+| 3 | Documentation Agent run | Agent 8 | Runs after Kickoff completes — documents full infrastructure journey from Azure through Kamatera to AWS Lightsail |
+| 4 | Three infrastructure deviations | Agent 0 → Agent 8 | Azure abandonment, Kamatera abandonment, AWS Lightsail with Ohio region — held by Kickoff, captured by Documentation Agent when Kickoff closes |
+
+---
+
+## 8. Claude Code Rules
 
 - Claude Code runs in VS Code terminal, approval mode only
 - Nothing writes to files without explicit developer approval
@@ -124,7 +154,7 @@ No agent proceeds with any work until this check is complete and reported. This 
 
 ---
 
-## 8. GitHub Repository Structure
+## 9. GitHub Repository Structure
 
 ```
 /
@@ -142,7 +172,7 @@ No agent proceeds with any work until this check is complete and reported. This 
 
 ---
 
-## 9. GitHub URL Standards
+## 10. GitHub URL Standards
 
 Always use `raw.githubusercontent.com` URLs when referencing GitHub files in agent prompts. The blob URL format (`github.com/user/repo/blob/main/file`) returns 404 for Claude's fetch tool. The correct format is:
 
@@ -154,7 +184,7 @@ Example: `SOURCE_OF_TRUTH.md` is accessed at `https://raw.githubusercontent.com/
 
 ---
 
-## 10. Phase Definitions
+## 11. Phase Definitions
 
 ### Phase 1 — Static Hosting
 **Builder:** Phase 1 Builder (Agent 3)
@@ -180,7 +210,7 @@ Example: `SOURCE_OF_TRUTH.md` is accessed at `https://raw.githubusercontent.com/
 
 ---
 
-## 11. Handoff Protocol
+## 12. Handoff Protocol
 
 Every phase follows this exact sequence before the next phase begins:
 
@@ -202,7 +232,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 12. Decisions Log
+## 13. Decisions Log
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
@@ -229,7 +259,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 13. Open Questions
+## 14. Open Questions
 
 | # | Question | Owner | Status |
 |---|----------|-------|--------|
@@ -237,7 +267,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 14. Phase Status
+## 15. Phase Status
 
 | Phase | Status |
 |-------|--------|
