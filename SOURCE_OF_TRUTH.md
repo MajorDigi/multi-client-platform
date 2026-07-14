@@ -96,7 +96,26 @@ MySQL (data layer — returns data to Node only)
 
 ---
 
-## 6. Claude Code Rules
+## 6. Source of Truth Freshness Protocol
+
+This protocol applies to every agent at the start of every session without exception.
+
+**Step 1** — Read `SOURCE_OF_TRUTH.md` via the raw GitHub URL.
+**Step 2** — Note the Last Updated date at the top of the document.
+**Step 3** — Compare that date to today's date.
+**Step 4** — Report one of two responses before doing any other work.
+
+If more than 24 hours have passed since Last Updated, state:
+> "SOURCE_OF_TRUTH.md read. Last Updated: [date]. More than 24 hours have passed. PM should paste the current source of truth contents directly into this chat before work proceeds."
+
+If less than 24 hours have passed, state:
+> "SOURCE_OF_TRUTH.md read. Last Updated: [date]. Within 24 hours — document appears current. If significant updates were made today consider pasting the latest version to be safe."
+
+No agent proceeds with any work until this check is complete and reported. This rule cannot be overridden.
+
+---
+
+## 7. Claude Code Rules
 
 - Claude Code runs in VS Code terminal, approval mode only
 - Nothing writes to files without explicit developer approval
@@ -105,7 +124,7 @@ MySQL (data layer — returns data to Node only)
 
 ---
 
-## 7. GitHub Repository Structure
+## 8. GitHub Repository Structure
 
 ```
 /
@@ -123,7 +142,7 @@ MySQL (data layer — returns data to Node only)
 
 ---
 
-## 8. GitHub URL Standards
+## 9. GitHub URL Standards
 
 Always use `raw.githubusercontent.com` URLs when referencing GitHub files in agent prompts. The blob URL format (`github.com/user/repo/blob/main/file`) returns 404 for Claude's fetch tool. The correct format is:
 
@@ -135,7 +154,7 @@ Example: `SOURCE_OF_TRUTH.md` is accessed at `https://raw.githubusercontent.com/
 
 ---
 
-## 9. Phase Definitions
+## 10. Phase Definitions
 
 ### Phase 1 — Static Hosting
 **Builder:** Phase 1 Builder (Agent 3)
@@ -161,7 +180,7 @@ Example: `SOURCE_OF_TRUTH.md` is accessed at `https://raw.githubusercontent.com/
 
 ---
 
-## 10. Handoff Protocol
+## 11. Handoff Protocol
 
 Every phase follows this exact sequence before the next phase begins:
 
@@ -183,7 +202,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 11. Decisions Log
+## 12. Decisions Log
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
@@ -210,7 +229,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 12. Open Questions
+## 13. Open Questions
 
 | # | Question | Owner | Status |
 |---|----------|-------|--------|
@@ -218,7 +237,7 @@ No exceptions. No skipping steps.
 
 ---
 
-## 13. Phase Status
+## 14. Phase Status
 
 | Phase | Status |
 |-------|--------|

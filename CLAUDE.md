@@ -6,9 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This repository is currently **pre-kickoff** — it contains only planning documents (`README.md`, `SOURCE_OF_TRUTH.md`). No application code, package manifests, or build tooling exist yet. There are no build/lint/test commands to run until Phase 1 work begins. Once code is added, update this file with the real commands (Angular build/serve/test, Node/Express start/test scripts, etc.).
 
-## Read SOURCE_OF_TRUTH.md first
+## Verification Rules
 
-`SOURCE_OF_TRUTH.md` is the authoritative project spec and process document. Read it before doing any work in this repo — it is updated by the "PM Agent" and takes precedence over assumptions or prior conversation context. If a request conflicts with it, flag the conflict instead of proceeding.
+`SOURCE_OF_TRUTH.md` is the authoritative project spec and process document. It takes precedence over assumptions or prior conversation context — if a request conflicts with it, flag the conflict instead of proceeding.
+
+At the start of every session, every agent (including Claude Code) follows the **Source of Truth Freshness Protocol** defined in `SOURCE_OF_TRUTH.md` §6: read the document via its raw GitHub URL, check the Last Updated date against today's date, and report freshness status before doing any other work. This rule cannot be overridden — do not substitute a simple "I read the file" note for the full freshness check and report.
 
 ## What this project is
 
@@ -39,7 +41,7 @@ Browser → IIS (serves Angular, proxies /api/* to Node) → Node/Express → My
 
 ## Planned repository layout
 
-Once phases begin, code is expected to land under this structure (see `SOURCE_OF_TRUTH.md` §7 for the canonical version):
+Once phases begin, code is expected to land under this structure (see `SOURCE_OF_TRUTH.md` §8 for the canonical version):
 
 ```
 /docs                  ← BA/UX spec and phase-completion docs
