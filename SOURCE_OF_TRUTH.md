@@ -34,7 +34,7 @@ This is not a LIFT-specific application. LIFT is a client of the platform. The p
 
 | Layer | Technology | Role |
 |-------|-----------|------|
-| Local Dev | VS Code + Claude Code CLI (approval mode) | Where code is written and reviewed |
+| Local Dev | VS Code + Claude Code CLI (approval mode), Node.js v24 LTS required | Where code is written and reviewed |
 | Version Control | GitHub | Bridge between local and server, source of truth for all agents |
 | Server | AWS Lightsail (Windows Server 2022) | Hosts everything, publicly accessible, $22/month flat rate, Ohio us-east-2a |
 | Web Server | IIS + URL Rewrite + ARR | Front door, serves Angular app, reverse proxies to Node |
@@ -143,6 +143,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 2 | Kamatera $10 security deposit | Developer | Reclaim from Kamatera billing console before forgotten |
 | 3 | Documentation Agent run | Agent 8 | Runs after Kickoff completes — documents full infrastructure journey from Azure through Kamatera to AWS Lightsail |
 | 4 | Three infrastructure deviations | Agent 0 → Agent 8 | Azure abandonment, Kamatera abandonment, AWS Lightsail with Ohio region — held by Kickoff, captured by Documentation Agent when Kickoff closes |
+| 5 | Local dev Node.js upgrade v22 to v24 | Developer | After Kickoff closes — upgrade local VS Code environment to match server Node v24 LTS |
 
 ---
 
