@@ -239,7 +239,7 @@ No exceptions. No skipping steps.
 | Date | Decision | Rationale |
 |------|----------|-----------|
 | 2026-07-07 | Windows VPS chosen over local hosting | Shareable links required from day one |
-| 2026-07-07 | MySQL on VPS, not Azure Database | No additional cost or complexity needed at this scale |
+| 2026-07-07 | MySQL on VPS, not Azure Database | MySQL Community Edition is fully free with no database size cap. SQL Server Express is free but caps at 10GB per database — a real constraint for a growing multi-client platform. SQL Server Standard/Enterprise carry licensing costs. Node.js mysql2 driver works equally well with MySQL. No technical advantage to SQL Server in a Node.js stack. |
 | 2026-07-07 | Angular chosen over React | Consistency with lawn care app, existing knowledge |
 | 2026-07-07 | Claude Code in approval mode only | Developer reviews every file write, no autonomous changes |
 | 2026-07-07 | GitHub as persistent source of truth | Prevents context drift across agent sessions |
