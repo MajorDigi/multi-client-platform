@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-07-14
+**Last Updated:** 2026-07-17
 **Status:** Pre-Kickoff
 
 ---
@@ -135,7 +135,7 @@ When all items are resolved this section updates to:
 The section is never deleted — cleared state is preserved as a record that items were tracked and intentionally closed, not abandoned.
 
 ### Current Radar Status
-🔴 Items on radar as of 2026-07-13
+🔴 Items on radar as of 2026-07-14
 
 | # | Item | Owner | Notes |
 |---|------|-------|-------|
@@ -258,6 +258,8 @@ No exceptions. No skipping steps.
 | 2026-07-12 | Client defined as contracting organization, attendees are anonymous respondents, no PII | No PII by design, sanitization enforced structurally at entry |
 | 2026-07-12 | Azure abandoned, Kamatera abandoned, AWS Lightsail selected | Azure hit Free Trial quota restrictions, Kamatera Windows licensing added $19/month making total $58/month, Lightsail at $22/month flat with Windows included and no quota friction |
 | 2026-07-12 | Ohio region selected over N. Virginia | Developer located in Cincinnati, Ohio is physically closer, lower latency, no functional downside |
+| 2026-07-14 | Node.js v24 LTS chosen over v22 | v22 moved to Maintenance LTS in 2026, v24 is current Active LTS with support through April 2028. Server and local dev both standardized on v24 for consistency. |
+| 2026-07-14 | Unplanned software left in place after Node.js install | Chocolatey, Python 3.14, VS 2026 Build Tools, and VC++ Redistributables installed automatically as side effect of Node.js v24 installer. No functional conflict with stack. Removal risk outweighs benefit. Logged as deviation for Documentation Agent. |
 
 ---
 
