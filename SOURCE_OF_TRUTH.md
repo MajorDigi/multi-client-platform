@@ -139,7 +139,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 
 | # | Item | Owner | Notes |
 |---|------|-------|-------|
-| 1 | Kickoff — paused at MySQL configuration wizard | Agent 0 | MySQL installed, Node v24 confirmed. Next session: reopen MySQL Installer, select Reconfigure, resume from Type and Networking screen. Credentials require PM review before entry — guidance documented in PM session. |
+| 1 | Kickoff — paused at MySQL Workbench SQL editor | Agent 0 | Database not yet created. Next session: CREATE DATABASE multi_client_platform, then run REVOKE/GRANT/FLUSH/SHOW GRANTS SQL to re-scope platform_app, report SHOW GRANTS to PM for confirmation, then live public firewall verification, then pre-flight checklist. |
 | 2 | Kamatera $10 security deposit | Developer | Reclaim from Kamatera billing console before forgotten |
 | 3 | Documentation Agent run | Agent 8 | Runs after Kickoff completes — documents full infrastructure journey from Azure through Kamatera to AWS Lightsail |
 | 4 | Three infrastructure deviations | Agent 0 → Agent 8 | Azure abandonment, Kamatera abandonment, AWS Lightsail with Ohio region — held by Kickoff, captured by Documentation Agent when Kickoff closes |
