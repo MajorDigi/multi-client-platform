@@ -2,7 +2,7 @@
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
 **Last Updated:** 2026-07-18
-**Status:** Pre-Kickoff
+**Status:** In Development — Phase 1 Starting
 
 ---
 
@@ -13,11 +13,9 @@
 
 ## 1. Project Overview
 
-A multi-client web platform that aggregates, organizes, and displays data for multiple clients through a single hosted system. All clients share one data pipeline and one dashboard, which renders dynamically based on each client's engagement data. The platform is built once and reused across every client, not extended or rebuilt per client.
+A multi-client web platform that aggregates, organizes, and displays engagement data for multiple clients through a single hosted system. The platform is built and operated by a consulting and facilitation practice co-owned by the developer and his business partner Ben. The practice runs structured engagements — workshops and sessions — for client organizations using the program Understanding Yourself: A Framework for Change. The platform exists to collect participant feedback from those engagements, aggregate and display the results, and give client organizations and stakeholders access to those results through a shared public dashboard. All clients share one data pipeline and one dashboard, which renders dynamically based on each client's engagement data. The platform is built once and reused across every client, not extended or rebuilt per client.
 
-**First client:** LIFT The Tri-State (workforce development program, operated through FreeStore Food Bank, Cincinnati OH)
-
-This is not a LIFT-specific application. LIFT is a client of the platform. The platform is the product.
+First client: LIFT The Tri-State — a workforce development program in Cincinnati, OH where an engagement was delivered. LIFT is a client organization of the consulting practice, not the owner or driver of the platform. The platform is the product.
 
 ---
 
@@ -136,7 +134,7 @@ When all items are resolved this section updates to:
 The section is never deleted — cleared state is preserved as a record that items were tracked and intentionally closed, not abandoned.
 
 ### Current Radar Status
-🔴 Items on radar as of 2026-07-14
+🔴 Items on radar as of 2026-07-18
 
 | # | Item | Owner | Notes |
 |---|------|-------|-------|
