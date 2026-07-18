@@ -94,6 +94,7 @@ MySQL (data layer — returns data to Node only)
 9. No agent commits directly to GitHub. Agents produce documents and code in chat. The developer saves files locally in VS Code. Claude Code handles all commits and pushes to GitHub.
 10. Agent 1 (BA/UX) scope boundary: BA/UX owns the application layer only — client data isolation, API query logic, display configuration, data upload flow, and application-level technical constraints. Infrastructure decisions — server, OS, IIS, networking, provisioning, hosting provider — belong to PM and Kickoff only. BA/UX does not cross into infrastructure territory.
 11. Checkpoints must be issued as standalone singular instructions. A checkpoint is never embedded at the end of a multi-step instruction block. When a step requires developer confirmation before proceeding, that confirmation request is its own separate message — nothing else follows it until confirmation is received.
+12. External accessibility and firewall verification must always use a dedicated open-port checking tool such as https://www.yougetsignal.com/tools/open-ports — never a mobile device browser. Enter the server IP and port number and confirm an unambiguous open or closed result. This applies to all agents performing any external reachability check in any phase.
 
 ---
 
