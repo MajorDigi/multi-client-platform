@@ -140,7 +140,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 
 | # | Item | Owner | Notes |
 |---|------|-------|-------|
-| 1 | Kickoff — paused at MySQL Workbench SQL editor | Agent 0 | Database not yet created. Next session: CREATE DATABASE multi_client_platform, then run REVOKE/GRANT/FLUSH/SHOW GRANTS SQL to re-scope platform_app, report SHOW GRANTS to PM for confirmation, then live public firewall verification, then pre-flight checklist. |
+| 1 | ✅ COMPLETE — Kickoff fully done as of 2026-07-17. All tools installed, configured, and verified. PREFLIGHT-CHECKLIST.md committed to GitHub. | Agent 0 | |
 | 2 | Kamatera $10 security deposit | Developer | Reclaim from Kamatera billing console before forgotten |
 | 3 | Documentation Agent run | Agent 8 | Runs after Kickoff completes — documents full infrastructure journey from Azure through Kamatera to AWS Lightsail |
 | 4 | Three infrastructure deviations | Agent 0 → Agent 8 | Azure abandonment, Kamatera abandonment, AWS Lightsail with Ohio region — held by Kickoff, captured by Documentation Agent when Kickoff closes |
@@ -278,7 +278,7 @@ No exceptions. No skipping steps.
 | Phase | Status |
 |-------|--------|
 | Pre-Kickoff Documentation | ✅ Complete |
-| Environment Setup (Kickoff) | 🟡 In Progress |
+| Environment Setup (Kickoff) | ✅ Complete |
 | BA/UX Spec | ✅ Complete |
 | Phase 1 — Static Hosting | ⬜ Not Started |
 | Phase 2 — API + Reverse Proxy | ⬜ Not Started |
