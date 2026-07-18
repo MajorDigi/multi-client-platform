@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 **Status:** Pre-Kickoff
 
 ---
@@ -36,7 +36,7 @@ This is not a LIFT-specific application. LIFT is a client of the platform. The p
 |-------|-----------|------|
 | Local Dev | VS Code + Claude Code CLI (approval mode), Node.js v24 LTS required | Where code is written and reviewed |
 | Version Control | GitHub | Bridge between local and server, source of truth for all agents |
-| Server | AWS Lightsail (Windows Server 2022) | Hosts everything, publicly accessible, $22/month flat rate, Ohio us-east-2a |
+| Server | AWS Lightsail (Windows Server 2022) | Hosts everything, publicly accessible, $22/month flat rate, Ohio us-east-2a<br>**Note:** RDP access via mstsc — enter 18.220.214.171 directly, password from Lightsail console Connect tab. No .rdp file available. |
 | Web Server | IIS + URL Rewrite + ARR | Front door, serves Angular app, reverse proxies to Node |
 | API | Node.js + Express | Business logic, queries MySQL, never exposed directly |
 | Database | MySQL | Data storage on AWS Lightsail VM, only Node talks to it |
@@ -144,8 +144,8 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 2 | Kamatera $10 security deposit | Developer | Reclaim from Kamatera billing console before forgotten |
 | 3 | Documentation Agent run | Agent 8 | Runs after Kickoff completes — documents full infrastructure journey from Azure through Kamatera to AWS Lightsail |
 | 4 | Three infrastructure deviations | Agent 0 → Agent 8 | Azure abandonment, Kamatera abandonment, AWS Lightsail with Ohio region — held by Kickoff, captured by Documentation Agent when Kickoff closes |
-| 5 | Local dev Node.js upgrade v22 to v24 | Developer | After Kickoff closes — upgrade local VS Code environment to match server Node v24 LTS |
-| 6 | RDP clipboard limitation — switch to native RDP client before Phase 1 | Developer | Browser-based RDP does not support clipboard paste. Switch to downloaded .rdp file opened via Windows Remote Desktop Connection app before Phase 1 begins. Low risk change, high impact for code/config paste operations. |
+| 5 | ✅ COMPLETE — Local machine already on v24.18.0, confirmed 2026-07-18. No upgrade needed. | Developer | |
+| 6 | ✅ COMPLETE — Native RDC confirmed working as of 2026-07-18. Connect via mstsc using static IP 18.220.214.171 and password from Lightsail console Connect tab. No downloadable .rdp file available for this instance type. Clipboard confirmed working local to remote. | Developer | |
 
 ---
 
