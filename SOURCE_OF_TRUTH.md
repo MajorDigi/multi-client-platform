@@ -144,6 +144,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 3 | Documentation Agent run | Agent 8 | Runs after Kickoff completes — documents full infrastructure journey from Azure through Kamatera to AWS Lightsail |
 | 4 | Three infrastructure deviations | Agent 0 → Agent 8 | Azure abandonment, Kamatera abandonment, AWS Lightsail with Ohio region — held by Kickoff, captured by Documentation Agent when Kickoff closes |
 | 5 | Local dev Node.js upgrade v22 to v24 | Developer | After Kickoff closes — upgrade local VS Code environment to match server Node v24 LTS |
+| 6 | RDP clipboard limitation — switch to native RDP client before Phase 1 | Developer | Browser-based RDP does not support clipboard paste. Switch to downloaded .rdp file opened via Windows Remote Desktop Connection app before Phase 1 begins. Low risk change, high impact for code/config paste operations. |
 
 ---
 
