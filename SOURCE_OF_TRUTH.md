@@ -146,6 +146,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 4 | Three infrastructure deviations | Agent 0 → Agent 8 | Azure abandonment, Kamatera abandonment, AWS Lightsail with Ohio region — held by Kickoff, captured by Documentation Agent when Kickoff closes |
 | 5 | ✅ COMPLETE — Local machine already on v24.18.0, confirmed 2026-07-18. No upgrade needed. | Developer | |
 | 6 | ✅ COMPLETE — Native RDC confirmed working as of 2026-07-18. Connect via mstsc using static IP 18.220.214.171 and password from Lightsail console Connect tab. No downloadable .rdp file available for this instance type. Clipboard confirmed working local to remote. | Developer | |
+| 7 | CLAUDE.md public visibility — revisit when Web Lab methodology matures | PM | Currently public by design. When Web Lab grows into a productized methodology, evaluate moving CLAUDE.md behind .gitignore or a private repo. No action needed now. |
 
 ---
 
