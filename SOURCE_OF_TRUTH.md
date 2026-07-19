@@ -70,7 +70,7 @@ MySQL (data layer — returns data to Node only)
 | 4 | Phase 2 Builder | Node.js API + MySQL + IIS reverse proxy | After Phase 1 assembles clean |
 | 5 | Phase 3 Builder | Auth, TLS, public shareable link | After Phase 2 assembles clean |
 | 6 | Assembler | Progressive integration after each phase, confirms phases hold together | After each phase completes |
-| 7 | QA / Testing | Connection tests, endpoint checks, auth flows, stakeholder link | After Assembler signs off per phase |
+| 7 | QA / Testing | Connection tests, endpoint checks, auth flows, stakeholder link verification. Hybrid QA model — for tests requiring browser access, console inspection, or interactive port scanning, Agent 7 walks the developer through the manual check step by step and records the developer's confirmed result in the test report, noting it as developer-verified. Claude in Chrome extension, when connected, enables direct browser testing. QA report must cover all checklist items regardless of verification method. | After Assembler signs off per phase |
 | 8 | Documentation | Produces phase artifacts, service docs, config references | After each phase, gates next phase |
 | 9 | Code Review | Reviews written code post-approval, returns structured verdict, feeds back to builders | Phase 2 onwards, on demand |
 | 10 | Consultation | Strategic thinking partner for PM. Handles questions too big or sensitive for the build layer. All outputs recorded locally in docs/STRATEGY-LOG.md only — never committed to GitHub. Activated on demand by PM only. | On demand — PM initiated only |
