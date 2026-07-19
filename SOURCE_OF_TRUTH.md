@@ -2,7 +2,7 @@
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
 **Last Updated:** 2026-07-19
-**Status:** In Development — Phase 1 Starting
+**Status:** In Development — Phase 1 Complete | Phase 2 Pending
 
 ---
 
@@ -95,6 +95,7 @@ MySQL (data layer — returns data to Node only)
 11. Checkpoints must be issued as standalone singular instructions. A checkpoint is never embedded at the end of a multi-step instruction block. When a step requires developer confirmation before proceeding, that confirmation request is its own separate message — nothing else follows it until confirmation is received.
 12. External accessibility and firewall verification must always use a dedicated open-port checking tool such as https://www.yougetsignal.com/tools/open-ports — never a mobile device browser. Enter the server IP and port number and confirm an unambiguous open or closed result. This applies to all agents performing any external reachability check in any phase.
 13. File structure discipline — before any builder agent creates a single file, PM must confirm the repo and file structure is defined and locked in SOURCE_OF_TRUTH.md Section 9. Builder agents never create files outside the defined structure without explicit PM approval. File structure is established in planning, not discovered in building.
+14. The header Status field, the Phase Status table, and the Last Updated date must always be updated together in the same commit. They are never updated separately. When a phase completes or a significant change is made PM updates all three in one Claude Code command.
 
 ---
 
