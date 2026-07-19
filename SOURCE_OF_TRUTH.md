@@ -146,6 +146,8 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 5 | ✅ COMPLETE — Local machine already on v24.18.0, confirmed 2026-07-18. No upgrade needed. | Developer | |
 | 6 | ✅ COMPLETE — Native RDC confirmed working as of 2026-07-18. Connect via mstsc using static IP 18.220.214.171 and password from Lightsail console Connect tab. No downloadable .rdp file available for this instance type. Clipboard confirmed working local to remote. | Developer | |
 | 7 | CLAUDE.md public visibility — revisit when Web Lab methodology matures | PM | Currently public by design. When Web Lab grows into a productized methodology, evaluate moving CLAUDE.md behind .gitignore or a private repo. No action needed now. |
+| 10 | Tier 2 document handling convention established — Agent 10 returns complete updated file not just new entry | PM | Developer replaces local file directly. No merge work. Applies to STRATEGY-LOG.md and WEBLAB-VISION.md. No build layer changes needed. |
+| 11 | GitHub repo Website field — add public dashboard URL when Phase 3 completes | PM | Leave blank until Phase 3 TLS and public link are live. Then update GitHub repo About panel Website field with the confirmed public URL. |
 
 ---
 
