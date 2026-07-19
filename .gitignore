@@ -24,3 +24,6 @@ npm-debug.log*
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Local only — not committed to GitHub
+docs/WEBLAB-VISION.md
