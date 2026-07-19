@@ -77,3 +77,15 @@ This is a real-time status, not a snapshot — check `SOURCE_OF_TRUTH.md` for th
 ```
 
 Phase-complete docs land in `/docs` as each phase finishes — those are the fastest way to see what actually got built, not just what was planned.
+
+## A Note on Information Architecture
+
+This repo is the public operational layer of the project — and that framing is deliberate.
+
+A second private layer exists locally, excluded from GitHub via .gitignore by design. It holds strategic thinking, vision documents, and methodology notes that are not ready to be public. You will not find them here, but you will find references to the fact that they exist — in the agent roster (Agent 10 — Consultation), in the .gitignore file, and in this note.
+
+This two-tier structure is a feature of the Web Lab methodology, not a workaround. Build decisions, stack choices, agent rules, phase status, and decisions log entries belong in the open where they can be audited, learned from, and built on. Strategic thinking about where this goes next stays private until it is ready to be revealed, productized, or acted on deliberately.
+
+The boundary is enforced mechanically via .gitignore, not just intentionally. The structure protects itself.
+
+Most projects have information boundaries. Few design them explicitly. This one does.
