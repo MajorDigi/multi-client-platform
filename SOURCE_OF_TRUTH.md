@@ -151,6 +151,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 10 | Tier 2 document handling convention established — Agent 10 returns complete updated file not just new entry | PM | Developer replaces local file directly. No merge work. Applies to STRATEGY-LOG.md and WEBLAB-VISION.md. No build layer changes needed. |
 | 11 | GitHub repo Website field — add public dashboard URL when Phase 3 completes | PM | Leave blank until Phase 3 TLS and public link are live. Then update GitHub repo About panel Website field with the confirmed public URL. |
 | 12 | Prepare Web Lab transfer document for Do Art Studio PM | Agent 2 | On demand or at project close. PM produces a methodology and lessons-learned handoff document for the Do Art Studio project PM. Captures agent structure principles, two-tier architecture, governance patterns, and what worked and what needed correction. |
+| 13 | README build timeline section — add at V1 completion | PM | Document the Web Lab efficiency story: commit history July 9 to completion, solo developer equivalent estimate 8-12 weeks, actual timeline in spare time with multi-agent workflow. Add after Phase 3 closes, not before. Agent 8 captures build timeline in final completion report first. |
 
 ---
 
