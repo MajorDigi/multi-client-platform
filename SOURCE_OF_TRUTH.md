@@ -292,6 +292,7 @@ No exceptions. No skipping steps.
 | 2026-07-19 | Repo and file structure locked before Phase 1 Builder starts | File structure definition is a PM responsibility that must be completed before any builder agent opens. Discovered as a gap when Phase 1 Builder was issued without a confirmed structure. Rule 13 added to prevent recurrence in this and future Web Lab projects. |
 | 2026-07-19 | Manual RDP deployment intentional for V1 | CI/CD automation deliberately excluded from V1 scope. Manual deploy via RDP is how the developer learns IIS static hosting directly — one of the stated Core Goals. CI/CD added to roadmap as a future phase consideration, not a V1 item. |
 | 2026-07-19 | Claude Code background task stop unreliable for process termination | ng serve and similar background processes may continue running after Claude Code TaskStop reports stopped. Always verify termination via netstat port check or tasklist process check. Never trust stopped status alone. |
+| 2026-07-19 | IIS Default Web Site must be stopped before standing up a new port 80 site | Default Web Site occupies port 80 on fresh IIS install. Any new IIS site binding on port 80 requires Default Web Site to be explicitly stopped first. This applies to all future phases and all future Web Lab projects using IIS. |
 
 ---
 
@@ -310,7 +311,7 @@ No exceptions. No skipping steps.
 | Pre-Kickoff Documentation | ✅ Complete |
 | Environment Setup (Kickoff) | ✅ Complete |
 | BA/UX Spec | ✅ Complete |
-| Phase 1 — Static Hosting | ⬜ Not Started |
+| Phase 1 — Static Hosting | ✅ Complete |
 | Phase 2 — API + Reverse Proxy | ⬜ Not Started |
 | Phase 3 — Auth + TLS + Public Link | ⬜ Not Started |
 | Final Assembly | ⬜ Not Started |
