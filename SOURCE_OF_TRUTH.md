@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-07-18
+**Last Updated:** 2026-07-19
 **Status:** In Development — Phase 1 Starting
 
 ---
@@ -150,6 +150,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 9 | [Routed to Tier 2 — Strategy Layer] | PM | This item was evaluated and deliberately moved to the private strategy layer. See STRATEGY-LOG.md locally. Not an omission. |
 | 10 | Tier 2 document handling convention established — Agent 10 returns complete updated file not just new entry | PM | Developer replaces local file directly. No merge work. Applies to STRATEGY-LOG.md and WEBLAB-VISION.md. No build layer changes needed. |
 | 11 | GitHub repo Website field — add public dashboard URL when Phase 3 completes | PM | Leave blank until Phase 3 TLS and public link are live. Then update GitHub repo About panel Website field with the confirmed public URL. |
+| 12 | Prepare Web Lab transfer document for Do Art Studio PM | Agent 2 | On demand or at project close. PM produces a methodology and lessons-learned handoff document for the Do Art Studio project PM. Captures agent structure principles, two-tier architecture, governance patterns, and what worked and what needed correction. |
 
 ---
 
