@@ -288,6 +288,8 @@ No exceptions. No skipping steps.
 | 2026-07-14 | Node.js v24 LTS chosen over v22 | v22 moved to Maintenance LTS in 2026, v24 is current Active LTS with support through April 2028. Server and local dev both standardized on v24 for consistency. |
 | 2026-07-14 | Unplanned software left in place after Node.js install | Chocolatey, Python 3.14, VS 2026 Build Tools, and VC++ Redistributables installed automatically as side effect of Node.js v24 installer. No functional conflict with stack. Removal risk outweighs benefit. Logged as deviation for Documentation Agent. |
 | 2026-07-19 | Repo and file structure locked before Phase 1 Builder starts | File structure definition is a PM responsibility that must be completed before any builder agent opens. Discovered as a gap when Phase 1 Builder was issued without a confirmed structure. Rule 13 added to prevent recurrence in this and future Web Lab projects. |
+| 2026-07-19 | Manual RDP deployment intentional for V1 | CI/CD automation deliberately excluded from V1 scope. Manual deploy via RDP is how the developer learns IIS static hosting directly — one of the stated Core Goals. CI/CD added to roadmap as a future phase consideration, not a V1 item. |
+| 2026-07-19 | Claude Code background task stop unreliable for process termination | ng serve and similar background processes may continue running after Claude Code TaskStop reports stopped. Always verify termination via netstat port check or tasklist process check. Never trust stopped status alone. |
 
 ---
 
