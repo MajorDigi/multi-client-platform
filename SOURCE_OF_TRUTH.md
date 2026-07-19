@@ -186,10 +186,10 @@ The following structure is locked. No builder agent creates files outside this s
 │   ├── src/
 │   │   ├── app/
 │   │   ├── assets/
-│   │   └── environments/
+│   │   └── environments/    ← required before Phase 2, added at Phase 1 close
 │   ├── angular.json
 │   ├── package.json
-│   └── tailwind.config.js
+│   └── .postcssrc.json (Tailwind v4 PostCSS config)
 ├── /server                  ← Node.js + Express API (Phase 2)
 │   ├── src/
 │   │   ├── routes/
@@ -295,6 +295,8 @@ No exceptions. No skipping steps.
 | 2026-07-19 | Manual RDP deployment intentional for V1 | CI/CD automation deliberately excluded from V1 scope. Manual deploy via RDP is how the developer learns IIS static hosting directly — one of the stated Core Goals. CI/CD added to roadmap as a future phase consideration, not a V1 item. |
 | 2026-07-19 | Claude Code background task stop unreliable for process termination | ng serve and similar background processes may continue running after Claude Code TaskStop reports stopped. Always verify termination via netstat port check or tasklist process check. Never trust stopped status alone. |
 | 2026-07-19 | IIS Default Web Site must be stopped before standing up a new port 80 site | Default Web Site occupies port 80 on fresh IIS install. Any new IIS site binding on port 80 requires Default Web Site to be explicitly stopped first. This applies to all future phases and all future Web Lab projects using IIS. |
+| 2026-07-19 | Tailwind v4 selected — tailwind.config.js replaced by CSS/PostCSS configuration | Tailwind v4 eliminates tailwind.config.js in favor of CSS-based configuration via .postcssrc.json and @tailwindcss/postcss. This is an intentional framework version decision, not a deviation from intent. Section 9 repo structure updated to reflect v4 conventions. |
+| 2026-07-19 | src/environments/ folder deferred to Phase 1 completion — added before Phase 2 | Angular environments folder required for Phase 2 API URL configuration. Absent from initial scaffold. Agent 3 directed to add it before Phase 1 signs off. |
 
 ---
 
