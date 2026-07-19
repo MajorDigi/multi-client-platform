@@ -73,9 +73,10 @@ MySQL (data layer — returns data to Node only)
 | 7 | QA / Testing | Connection tests, endpoint checks, auth flows, stakeholder link | After Assembler signs off per phase |
 | 8 | Documentation | Produces phase artifacts, service docs, config references | After each phase, gates next phase |
 | 9 | Code Review | Reviews written code post-approval, returns structured verdict, feeds back to builders | Phase 2 onwards, on demand |
+| 10 | Consultation | Strategic thinking partner for PM. Handles questions too big or sensitive for the build layer. All outputs recorded locally in docs/STRATEGY-LOG.md only — never committed to GitHub. Activated on demand by PM only. | On demand — PM initiated only |
 
 ### Reserved Slots
-- **Agent 10+** — roster can be extended. No new agent is added without PM approval and a defined role, scope, and handoff point documented here.
+- **Agent 11+** — roster can be extended. No new agent is added without PM approval and a defined role, scope, and handoff point documented here.
 
 ---
 
