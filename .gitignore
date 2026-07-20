@@ -36,3 +36,6 @@ docs/AGENT-10-CONSULTATION-KICKOFF-PROMPT.md
 
 # Developer context document — local only
 docs/DEVELOPER-CONTEXT.md
+
+# Source data files — local only
+docs/LIFT_TriState_All_Sessions_Export.csv
