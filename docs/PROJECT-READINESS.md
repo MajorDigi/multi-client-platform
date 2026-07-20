@@ -59,3 +59,18 @@ Status below reflects this project (multi-client-platform) as of the Pre-Kickoff
 ---
 
 *Unchecked items above are the actual remaining gap between "documentation complete" and "environment ready" — they are the Kickoff Agent's starting task list, not a reflection of scope not yet decided.*
+
+---
+
+## Standing Pre-Project Data Audit
+
+Before design or build begins on any Web Lab project, the following questions must be answered and documented:
+
+1. Does existing data need to be migrated into this platform?
+2. If yes — what format is the existing data in?
+3. What is the target schema the data must conform to?
+4. Who builds the import capability — a builder agent or is it a core platform feature?
+5. Who performs the actual migration — developer or builder agent?
+6. When in the phase sequence does migration happen?
+
+These questions must be answered before Agent 1 BA/UX begins discovery. A data migration gap discovered in Phase 2 costs significantly more time than one surfaced in planning.
