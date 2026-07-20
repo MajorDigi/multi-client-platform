@@ -84,8 +84,6 @@ This repo is the public operational layer of the project — and that framing is
 
 In practice this means the project runs on two tiers. Tier 1 is everything in this repo — build decisions, stack choices, agent rules, phase status, decisions log. Public, auditable, and deliberately open. Tier 2 is a Consultation Agent and a set of local-only documents excluded via .gitignore — strategic thinking, vision notes, and methodology development that stays private until it is ready. The Consultation Agent appears in the agent roster as Agent 10. Its outputs never reach GitHub. The two tiers are not just conceptually separate — they are structurally enforced.
 
-A second private layer exists locally, excluded from GitHub via .gitignore by design. It holds strategic thinking, vision documents, and methodology notes that are not ready to be public. You will not find them here, but you will find references to the fact that they exist — in the agent roster (Agent 10 — Consultation), in the .gitignore file, and in this note.
-
 This two-tier structure is a feature of the Web Lab methodology, not a workaround. Build decisions, stack choices, agent rules, phase status, and decisions log entries belong in the open where they can be audited, learned from, and built on. Strategic thinking about where this goes next stays private until it is ready to be revealed, productized, or acted on deliberately.
 
 The boundary is enforced mechanically via .gitignore, not just intentionally. The structure protects itself.
