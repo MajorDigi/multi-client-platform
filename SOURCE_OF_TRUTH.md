@@ -258,11 +258,15 @@ Every phase follows this exact sequence before the next phase begins:
 ```
 Builder completes work
         ↓
+Builder self-check against Section 9 (Rule 15)
+        ↓
 Assembler confirms integration is clean
         ↓
 QA tests and returns results
         ↓
-Documentation Agent produces phase artifact → pushes to GitHub
+Documentation Agent produces phase artifact → commits to GitHub
+        ↓
+PM and developer post-phase debrief — surfaces anything missed, captures learnings before next phase opens
         ↓
 PM updates this document
         ↓
