@@ -199,7 +199,7 @@ The following structure is locked. No builder agent creates files outside this s
 │   │   ├── controllers/
 │   │   └── db/
 │   └── package.json
-└── /deployment              ← IIS configuration and deployment scripts
+└── /deployment              ← IIS configuration and deployment scripts (Phase 2 deliverable — not required for Phase 1 sign-off. Created when IIS reverse proxy config files are produced in Phase 2.)
     ├── iis-config/
     └── scripts/
 ```
@@ -300,6 +300,7 @@ No exceptions. No skipping steps.
 | 2026-07-19 | IIS Default Web Site must be stopped before standing up a new port 80 site | Default Web Site occupies port 80 on fresh IIS install. Any new IIS site binding on port 80 requires Default Web Site to be explicitly stopped first. This applies to all future phases and all future Web Lab projects using IIS. |
 | 2026-07-19 | Tailwind v4 selected — tailwind.config.js replaced by CSS/PostCSS configuration | Tailwind v4 eliminates tailwind.config.js in favor of CSS-based configuration via .postcssrc.json and @tailwindcss/postcss. This is an intentional framework version decision, not a deviation from intent. Section 9 repo structure updated to reflect v4 conventions. |
 | 2026-07-19 | src/environments/ folder deferred to Phase 1 completion — added before Phase 2 | Angular environments folder required for Phase 2 API URL configuration. Absent from initial scaffold. Agent 3 directed to add it before Phase 1 signs off. |
+| 2026-07-19 | /deployment folder deferred to Phase 2 | No IIS config files were produced in Phase 1 that warranted permanent storage. /deployment folder will be created in Phase 2 when reverse proxy configuration produces config files worth keeping. Section 9 annotated accordingly. |
 
 ---
 
