@@ -163,6 +163,8 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 19 | ✅ COMPLETE — PHASE-1-COMPLETE.md committed to GitHub as dc453d2 on 2026-07-19. | Agent 8 | |
 | 21 | Claude in Chrome — add to Kickoff for future Web Lab projects | PM | QA Agent requires browser access for console inspection, visual rendering confirmation, and interactive port scanning. Claude in Chrome extension provides this capability. Must be installed and verified as part of Kickoff infrastructure setup for all future Web Lab projects — same priority as IIS, Node, and MySQL. |
 | 22 | Investigate yougetsignal.com rendering issue before Phase 2 | Developer | yougetsignal result banner did not render during Phase 1 QA — possible ad-blocker interference. Troubleshoot before Phase 2 introduces additional ports requiring verification. Test-NetConnection is approved fallback but yougetsignal should be confirmed working. |
+| 23 | Agent 1 mapping session — reshape existing LIFT data to flexible question-bank schema | Agent 1 | Before Phase 2 Builder opens. Bring existing LIFT Session 1 and Session 2 data structure to Agent 1. Agent 1 produces a mapping document showing how each fixed column maps to the new questions/respondents/responses schema. That document becomes the import spec for Phase 2 Builder. |
+| 24 | Pre-project data audit question — add to Web Lab pre-kickoff checklist | PM | Every future Web Lab project must answer before design begins: does existing data need to be migrated into this platform? If yes — what format is it in, what is the target schema, and who builds the import capability? This is now a standing pre-kickoff question for all Web Lab projects. |
 
 ---
 
