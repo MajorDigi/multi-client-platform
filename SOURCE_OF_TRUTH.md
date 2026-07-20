@@ -302,6 +302,8 @@ No exceptions. No skipping steps.
 | 2026-07-19 | Tailwind v4 selected — tailwind.config.js replaced by CSS/PostCSS configuration | Tailwind v4 eliminates tailwind.config.js in favor of CSS-based configuration via .postcssrc.json and @tailwindcss/postcss. This is an intentional framework version decision, not a deviation from intent. Section 9 repo structure updated to reflect v4 conventions. |
 | 2026-07-19 | src/environments/ folder deferred to Phase 1 completion — added before Phase 2 | Angular environments folder required for Phase 2 API URL configuration. Absent from initial scaffold. Agent 3 directed to add it before Phase 1 signs off. |
 | 2026-07-19 | /deployment folder deferred to Phase 2 | No IIS config files were produced in Phase 1 that warranted permanent storage. /deployment folder will be created in Phase 2 when reverse proxy configuration produces config files worth keeping. Section 9 annotated accordingly. |
+| 2026-07-19 | CSV bulk import feature added to V1 scope | Every client engagement produces data outside the platform first. A CSV import capability is a core V1 feature — not a nice-to-have. Handles existing data backlog and future client onboarding. Phase 2 Builder implements it alongside the admin data entry grid. |
+| 2026-07-19 | Existing LIFT Session 1 and Session 2 data migration in scope for V1 | Two existing datasets acknowledged in ARCHITECTURE-BRIEF.md Section 7. Data will be exported from Claude as CSV, reshaped to match flexible question-bank schema via an Agent 1 mapping session, and imported through the new CSV import feature in Phase 2. Developer performs the migration. Phase 2 Builder builds the import tool. |
 
 ---
 
