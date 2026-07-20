@@ -314,6 +314,7 @@ No exceptions. No skipping steps.
 | # | Question | Owner | Status |
 |---|----------|-------|--------|
 | 1 | BA/UX spec — V1 feature set | BA/UX Agent | ✅ Closed — BA-UX-SPEC.md and ARCHITECTURE-BRIEF.md committed to GitHub |
+| 2 | Existing LIFT Session 1 and Session 2 data migration | Agent 1 → Phase 2 Builder | 🟡 In Progress — Agent 1 mapping session required before Phase 2 Builder opens. Agent 1 to produce schema mapping document. Phase 2 Builder implements CSV import feature and developer performs migration. |
 
 ---
 
