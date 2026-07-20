@@ -10,7 +10,7 @@ This platform is built and operated by a consulting and facilitation practice, c
 
 ## How This Is Being Built
 
-This project is also a working experiment in AI-assisted software development, and that's worth being upfront about. Rather than one long freeform Claude conversation, the build runs through a **10-agent roster**, each with a scoped job and a defined handoff point — a Kickoff agent for environment setup, a BA/UX agent for requirements, a PM agent that owns a living source-of-truth document, phase builders for each build stage, an Assembler, QA, Documentation, and Code Review. Nothing moves to the next phase until the previous one is documented. No agent commits code directly — Claude Code, running locally in approval mode, is the only thing with GitHub write access, and every file change gets a human review before it lands.
+This project is also a working experiment in AI-assisted software development, and that's worth being upfront about. Rather than one long freeform Claude conversation, the build runs through an **11-agent roster**, each with a scoped job and a defined handoff point — a Kickoff agent for environment setup, a BA/UX agent for requirements, a PM agent that owns a living source-of-truth document, phase builders for each build stage, an Assembler, QA, Documentation, Code Review, and a Consultation agent that handles strategic thinking in a private layer separate from the build. Nothing moves to the next phase until the previous one is documented. No agent commits code directly — Claude Code, running locally in approval mode, is the only thing with GitHub write access, and every file change gets a human review before it lands.
 
 It's slower than letting an AI agent run wild on a repo. That's the point — the goal is a repeatable, auditable process, not just a working app. `SOURCE_OF_TRUTH.md` in this repo is the actual coordination document every agent reads before doing anything; it's a reasonable place to see the methodology in practice rather than just described here.
 
@@ -45,10 +45,10 @@ QR-code self-entry was deliberately scoped out of V1 (logged as a candidate for 
 | Pre-Kickoff Documentation | ✅ Complete |
 | Environment Setup (Kickoff) | ✅ Complete — AWS Lightsail provisioned, IIS/Node/MySQL installed and verified |
 | BA/UX Spec | ✅ Complete |
-| Phase 1 — Static Hosting | ⬜ Not started |
-| Phase 2 — API + Reverse Proxy | ⬜ Not started |
-| Phase 3 — Auth + TLS + Public Link | ⬜ Not started |
-| Final Assembly | ⬜ Not started |
+| Phase 1 — Static Hosting | ✅ Complete — Angular app served via IIS, externally verified |
+| Phase 2 — API + Reverse Proxy | 🟡 In Progress |
+| Phase 3 — Auth + TLS + Public Link | ⬜ Not Started |
+| Final Assembly | ⬜ Not Started |
 
 This is a real-time status, not a snapshot — check `SOURCE_OF_TRUTH.md` for the current state; it's updated after every significant decision or phase completion.
 
@@ -81,6 +81,8 @@ Phase-complete docs land in `/docs` as each phase finishes — those are the fas
 ## A Note on Information Architecture
 
 This repo is the public operational layer of the project — and that framing is deliberate.
+
+In practice this means the project runs on two tiers. Tier 1 is everything in this repo — build decisions, stack choices, agent rules, phase status, decisions log. Public, auditable, and deliberately open. Tier 2 is a Consultation Agent and a set of local-only documents excluded via .gitignore — strategic thinking, vision notes, and methodology development that stays private until it is ready. The Consultation Agent appears in the agent roster as Agent 10. Its outputs never reach GitHub. The two tiers are not just conceptually separate — they are structurally enforced.
 
 A second private layer exists locally, excluded from GitHub via .gitignore by design. It holds strategic thinking, vision documents, and methodology notes that are not ready to be public. You will not find them here, but you will find references to the fact that they exist — in the agent roster (Agent 10 — Consultation), in the .gitignore file, and in this note.
 
