@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-07-19
+**Last Updated:** 2026-07-20
 **Status:** In Development — Phase 2 In Progress
 
 ---
@@ -167,6 +167,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 24 | Pre-project data audit question — add to Web Lab pre-kickoff checklist | PM | Every future Web Lab project must answer before design begins: does existing data need to be migrated into this platform? If yes — what format is it in, what is the target schema, and who builds the import capability? This is now a standing pre-kickoff question for all Web Lab projects. |
 | 25 | README closing paragraph — add data protection story | PM | At V1 completion alongside rows 13 and 14. Explain how participant data is protected at every layer: local CSV gated via .gitignore, MySQL only accessible through Node, Node only accessible through IIS, raw data never in the public repo. This is a trust and credibility statement for stakeholders and employers reading the repo. |
 | 26 | Post-phase PM debrief — establish as standing practice in handoff protocol | PM | After every phase closes and before the next phase opens, PM and developer hold a short debrief session. Purpose: surface things that lived in developer's mind but did not make it to an agent, review what got missed, capture learnings before they are lost. Add this as a formal step in the Handoff Protocol in Section 12. |
+| 27 | Helen Lewis Homes dataset ready for import | Developer | HelenLewisHomes_Export.csv confirmed and saved locally at docs/HelenLewisHomes_Export.csv. 4 records, 1 session, 23 columns. Gated via .gitignore. Different question structure than LIFT dataset — first proof the flexible question-bank schema handles multiple clients correctly. Ready for import once Phase 2 Builder implements CSV import feature. |
 
 ---
 
