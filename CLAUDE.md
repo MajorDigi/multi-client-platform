@@ -84,3 +84,5 @@ Example: `SOURCE_OF_TRUTH.md` is accessed at `https://raw.githubusercontent.com/
 ## Updating SOURCE_OF_TRUTH.md
 
 Significant decisions and phase completions are expected to be recorded in `SOURCE_OF_TRUTH.md`'s Decisions Log and Phase Status table (this is the PM Agent's job per the roster above). If you make or observe a locked decision or complete a phase gate, update the relevant table there rather than leaving it only in chat/commit history.
+
+**Last Updated date discipline** — every Claude Code command that modifies `SOURCE_OF_TRUTH.md` must include updating the Last Updated date field to today's date as part of the same commit. No exceptions. This is not optional and does not depend on the type of change being made. A `SOURCE_OF_TRUTH.md` commit without a Last Updated date update is incomplete.
