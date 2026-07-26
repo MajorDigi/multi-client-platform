@@ -164,7 +164,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 19 | ✅ COMPLETE — PHASE-1-COMPLETE.md committed to GitHub as dc453d2 on 2026-07-19. | Agent 8 | |
 | 21 | Claude in Chrome — add to Kickoff for future Web Lab projects | PM | QA Agent requires browser access for console inspection, visual rendering confirmation, and interactive port scanning. Claude in Chrome extension provides this capability. Must be installed and verified as part of Kickoff infrastructure setup for all future Web Lab projects — same priority as IIS, Node, and MySQL. |
 | 22 | Investigate yougetsignal.com rendering issue before Phase 2 | Developer | yougetsignal result banner did not render during Phase 1 QA — possible ad-blocker interference. Troubleshoot before Phase 2 introduces additional ports requiring verification. Test-NetConnection is approved fallback but yougetsignal should be confirmed working. |
-| 23 | Agent 1 mapping session — reshape existing LIFT data to flexible question-bank schema | Agent 1 | Before Phase 2 Builder opens. Bring existing LIFT Session 1 and Session 2 data structure to Agent 1. Agent 1 produces a mapping document showing how each fixed column maps to the new questions/respondents/responses schema. That document becomes the import spec for Phase 2 Builder. |
+| 23 | ✅ COMPLETE — Agent 1 mapping session done 2026-07-25. LIFT-DATA-MAPPING.md committed to GitHub. Phase 2 Builder cleared to open. | Agent 1 | |
 | 24 | Pre-project data audit question — add to Web Lab pre-kickoff checklist | PM | Every future Web Lab project must answer before design begins: does existing data need to be migrated into this platform? If yes — what format is it in, what is the target schema, and who builds the import capability? This is now a standing pre-kickoff question for all Web Lab projects. |
 | 25 | README closing paragraph — add data protection story | PM | At V1 completion alongside rows 13 and 14. Explain how participant data is protected at every layer: local CSV gated via .gitignore, MySQL only accessible through Node, Node only accessible through IIS, raw data never in the public repo. This is a trust and credibility statement for stakeholders and employers reading the repo. |
 | 26 | Post-phase PM debrief — establish as standing practice in handoff protocol | PM | After every phase closes and before the next phase opens, PM and developer hold a short debrief session. Purpose: surface things that lived in developer's mind but did not make it to an agent, review what got missed, capture learnings before they are lost. Add this as a formal step in the Handoff Protocol in Section 12. |
@@ -328,7 +328,7 @@ No exceptions. No skipping steps.
 | # | Question | Owner | Status |
 |---|----------|-------|--------|
 | 1 | BA/UX spec — V1 feature set | BA/UX Agent | ✅ Closed — BA-UX-SPEC.md and ARCHITECTURE-BRIEF.md committed to GitHub |
-| 2 | Existing LIFT Session 1 and Session 2 data migration | Agent 1 → Phase 2 Builder | 🟡 In Progress — Agent 1 mapping session required before Phase 2 Builder opens. Agent 1 to produce schema mapping document. Phase 2 Builder implements CSV import feature and developer performs migration. |
+| 2 | Existing LIFT Session 1 and Session 2 data migration | Agent 1 → Phase 2 Builder | ✅ Complete — LIFT-DATA-MAPPING.md committed to GitHub as 7581522 on 2026-07-25. Schema mapping covers all 17 CSV columns, 7 schema tables, INSERT order, blank field handling, and Helen Lewis Homes multi-client proof point. Phase 2 Builder has the import spec it needs. |
 
 ---
 
