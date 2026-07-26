@@ -101,3 +101,11 @@ Before every builder agent opens, PM must complete this audit. This is not optio
 7. **Agent 1 BA/UX sign-off confirmed** — confirm any scope additions or changes discovered since the last phase have been reviewed with Agent 1 before the builder receives them.
 
 If any of these seven items is not clean stop and resolve it before opening the builder agent.
+
+---
+
+## Tool Execution Workflows
+
+For any project using Knex.js or a similar migration tool, document the full execution workflow before Phase 2 Builder opens. The workflow must clearly define: who writes the migration file, who reviews it, who commits it, who executes it on the server, and who confirms the result. No step in the workflow should be ambiguous about ownership.
+
+Template: Agent writes → Developer reviews → Claude Code commits → Developer executes on server → Developer confirms.

@@ -189,6 +189,25 @@ The section is never deleted — cleared state is preserved as a record that ite
 
 ---
 
+## 16. Tool Workflows
+
+### Knex Migration Workflow
+
+This workflow executes every time a new database migration is needed.
+
+- **Step 1** — Agent 4 Phase 2 Builder writes the migration file content in chat.
+- **Step 2** — Developer reviews the migration file.
+- **Step 3** — Claude Code writes the file to /server/migrations/ in approval mode.
+- **Step 4** — Developer approves the file write.
+- **Step 5** — Claude Code commits and pushes to GitHub.
+- **Step 6** — Developer RDPs into the server at 18.220.214.171.
+- **Step 7** — Developer runs knex migrate:latest in the server terminal.
+- **Step 8** — MySQL schema is created or updated.
+
+**Rules:** No agent runs terminal commands on the live server. Developer owns Steps 2, 4, 6, 7, and 8. Agent 4 owns Step 1. Claude Code owns Steps 3 and 5.
+
+---
+
 ## 9. GitHub Repository Structure
 
 The following structure is locked. No builder agent creates files outside this structure without PM approval.
