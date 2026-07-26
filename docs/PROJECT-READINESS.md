@@ -85,3 +85,19 @@ These rules apply to every Web Lab project from day one and must be verified bef
 2. **Rule scope discipline** — every agent rule must be written to cover all scenarios it applies to, not just the most obvious one. When a rule gap is discovered mid-project it must be fixed immediately and logged as a methodology learning.
 3. **README sync discipline** — the README Build Status table must stay in sync with the SOURCE_OF_TRUTH.md Phase Status table. They update together in the same commit on every phase change.
 4. **Pre-project rule audit** — before Phase 1 Builder opens on any future Web Lab project, PM must audit all agent rules for narrow-scope gaps and stress-test them against realistic edge cases.
+
+---
+
+## Pre-Phase Audit Checklist
+
+Before every builder agent opens, PM must complete this audit. This is not optional — it is a required gate that runs before Phase 1, Phase 2, and Phase 3 Builder agents receive their kickoff prompt. Estimated time: 5 minutes.
+
+1. **Source of truth current** — confirm Last Updated date in SOURCE_OF_TRUTH.md matches the most recent commit date. If it does not, update it before proceeding.
+2. **Phase Status table accurate** — confirm the Phase Status table reflects actual current state, not assumed state.
+3. **README Build Status in sync** — confirm README Build Status table matches SOURCE_OF_TRUTH.md Phase Status table exactly.
+4. **PM Radar reviewed** — scan all open radar items and confirm nothing on the radar is blocking the phase about to open.
+5. **Repo structure confirmed** — confirm Section 9 repo structure is defined and locked for the phase about to open.
+6. **Open Questions reviewed** — confirm no open question in Section 14 is blocking the phase about to open.
+7. **Agent 1 BA/UX sign-off confirmed** — confirm any scope additions or changes discovered since the last phase have been reviewed with Agent 1 before the builder receives them.
+
+If any of these seven items is not clean stop and resolve it before opening the builder agent.
