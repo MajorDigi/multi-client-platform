@@ -74,3 +74,14 @@ Before design or build begins on any Web Lab project, the following questions mu
 6. When in the phase sequence does migration happen?
 
 These questions must be answered before Agent 1 BA/UX begins discovery. A data migration gap discovered in Phase 2 costs significantly more time than one surfaced in planning.
+
+---
+
+## Standing Methodology Rules
+
+These rules apply to every Web Lab project from day one and must be verified before any builder agent opens.
+
+1. **Last Updated date discipline** — every commit that modifies SOURCE_OF_TRUTH.md must update the Last Updated date field in the same commit. No exceptions. A commit that touches SOURCE_OF_TRUTH.md without bumping the Last Updated date is incomplete and creates context drift.
+2. **Rule scope discipline** — every agent rule must be written to cover all scenarios it applies to, not just the most obvious one. When a rule gap is discovered mid-project it must be fixed immediately and logged as a methodology learning.
+3. **README sync discipline** — the README Build Status table must stay in sync with the SOURCE_OF_TRUTH.md Phase Status table. They update together in the same commit on every phase change.
+4. **Pre-project rule audit** — before Phase 1 Builder opens on any future Web Lab project, PM must audit all agent rules for narrow-scope gaps and stress-test them against realistic edge cases.
