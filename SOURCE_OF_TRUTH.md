@@ -176,6 +176,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 32 | README — weave harness engineering and primitive RAG architecture language throughout | PM | Before V1 completion. The README currently tells the methodology story but does not explicitly name harness engineering or the RAG parallel. Add language that: names harness engineering explicitly as the methodology being practiced, draws the parallel between the source of truth retrieval pattern and RAG architecture, and frames Web Lab as a proof of concept for AI-orchestrated software development. This lore thread should run throughout the README not just appear in one section. |
 | 33 | Claude Code command complexity discipline — add to methodology standards | PM | Commands evolved from single-change to multi-change over the course of Phase 1 and Phase 2. Standing rule: batch only routine updates of the same type — radar rows, date bumps, status changes. Keep structural changes — rule modifications, section rewrites, multi-file edits — as separate focused commands. Confidence in what is being changed should match the complexity of the command reviewing it. Add to PROJECT-READINESS.md as a standing methodology standard. |
 | 34 | Agent initiation as standing methodology step — add to PROJECT-READINESS.md | PM | Every agent that will be needed in a phase should be opened and given its identity kickoff prompt before the phase begins — not activated mid-phase when it is first needed. Agents sit idle after initiation and are activated with a targeted prompt when their work arrives. This prevents delays mid-build and ensures every agent has read the current source of truth before work reaches them. Add to PROJECT-READINESS.md pre-phase checklist. |
+| 35 | Knex.js migrations added to Phase 2 scope | Agent 4 | Phase 2 Builder installs Knex.js as npm package in /server alongside mysql2. Creates migration files in /server/migrations/. First migration builds all seven schema tables in correct INSERT order per LIFT-DATA-MAPPING.md. Replaces manual MySQL Workbench SQL execution. Free open source MIT license. No server infrastructure changes needed. Developer runs knex migrate:latest via RDP at deployment time. |
 
 ---
 
@@ -212,6 +213,7 @@ The following structure is locked. No builder agent creates files outside this s
 │   │   ├── routes/
 │   │   ├── controllers/
 │   │   └── db/
+│   ├── /server/migrations/  ← Knex migration files, one per schema change
 │   └── package.json
 └── /deployment              ← IIS configuration and deployment scripts (Phase 2 deliverable — not required for Phase 1 sign-off. Created when IIS reverse proxy config files are produced in Phase 2.)
     ├── iis-config/
@@ -321,6 +323,7 @@ No exceptions. No skipping steps.
 | 2026-07-19 | /deployment folder deferred to Phase 2 | No IIS config files were produced in Phase 1 that warranted permanent storage. /deployment folder will be created in Phase 2 when reverse proxy configuration produces config files worth keeping. Section 9 annotated accordingly. |
 | 2026-07-19 | CSV bulk import feature added to V1 scope | Every client engagement produces data outside the platform first. A CSV import capability is a core V1 feature — not a nice-to-have. Handles existing data backlog and future client onboarding. Phase 2 Builder implements it alongside the admin data entry grid. |
 | 2026-07-19 | Existing LIFT Session 1 and Session 2 data migration in scope for V1 | Two existing datasets acknowledged in ARCHITECTURE-BRIEF.md Section 7. Data will be exported from Claude as CSV, reshaped to match flexible question-bank schema via an Agent 1 mapping session, and imported through the new CSV import feature in Phase 2. Developer performs the migration. Phase 2 Builder builds the import tool. |
+| 2026-07-25 | Knex.js selected as query builder and migration tool for Phase 2 | Free open source MIT license, no cost. Installs as npm package alongside mysql2. Handles schema migrations via versioned migration files in /server/migrations/ — replaces manual SQL execution in MySQL Workbench. Consistent with Node.js Express stack, supports MySQL natively. |
 
 ---
 

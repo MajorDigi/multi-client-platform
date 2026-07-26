@@ -20,7 +20,7 @@ It's slower than letting an AI agent run wild on a repo. That's the point — th
 |---|---|---|
 | Server | AWS Lightsail, Windows Server 2022 | Flat $22/month including Windows licensing, no quota friction. (Azure was tried first and abandoned over Free Trial VM quota restrictions; Kamatera was tried second and abandoned when licensing pushed real cost to ~$58/month.) |
 | Web Server | IIS + URL Rewrite + ARR | Serves the Angular build, reverse-proxies API traffic. Chosen deliberately — hands-on production IIS experience is a stated goal of this project, not an accident of the stack. |
-| API | Node.js + Express | Only layer allowed to talk to the database directly |
+| API | Node.js + Express | Only layer allowed to talk to the database directly. Knex.js handles query building and schema migrations — migration files version-control the database schema alongside the application code. |
 | Database | MySQL | No database-size cap (unlike SQL Server Express's 10GB limit), no licensing cost, works cleanly with Node's `mysql2` driver |
 | Frontend | Angular + TypeScript + Tailwind CSS | Consistency with another active project, building on existing framework knowledge |
 
