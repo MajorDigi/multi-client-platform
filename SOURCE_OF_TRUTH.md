@@ -370,6 +370,25 @@ This workflow executes every time a new database migration is needed.
 
 **Rules:** No agent runs terminal commands on the live server. Developer owns Steps 2, 4, 6, 7, and 8. Agent 4 owns Step 1. Claude Code owns Steps 3 and 5.
 
+### .env File Creation Workflow
+
+Two .env files are required at two different points in Phase 2. Neither is ever committed to GitHub.
+
+- **Local .env** — created in /server by the developer before local MySQL connection testing. Developer retrieves platform_app password from local password manager and creates the file manually in VS Code.
+- **Server .env** — created directly on the server by the developer via RDP at deployment time. Developer types credentials directly into the server terminal. Never transferred through GitHub or any file transfer mechanism.
+
+**Template for both:**
+```
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=platform_app
+DB_PASSWORD=[retrieved from password manager]
+DB_NAME=multi_client_platform
+PORT=3000
+```
+
+**Security rules:** never paste credentials into any chat, never commit .env to GitHub, never transfer .env between local and server via any mechanism — create it independently in each environment.
+
 ---
 
 *This document is the single source of truth for this project. All agents defer to it. All decisions are recorded in it. It lives in GitHub and is updated by the PM Agent after every significant decision or phase completion.*
