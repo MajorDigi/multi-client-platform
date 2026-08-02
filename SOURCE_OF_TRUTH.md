@@ -340,6 +340,8 @@ No exceptions. No skipping steps.
 | 2026-07-26 | sessions.session_date is the canonical column name | date is a reserved word in MySQL and risky as a bare column name. session_date confirmed as canonical by Agent 1. Use session_date consistently in migration files, import scripts, and all API queries. |
 | 2026-07-26 | respondents.response_id typed as integer not string | LIFT CSV confirms response_id values are plain integers 1 2 3. Integer type chosen for cleaner sorting filtering and consistency with source data. |
 | 2026-07-26 | CLI-ready block confirmation loop must be explicitly closed | A migration file fix was generated in chat and sent to Agent 9 for review but the CLI-ready block was never executed through Claude Code — the file on disk did not match the reviewed version. Standing rule: every CLI-ready block must be followed by an explicit developer confirmation that Claude Code ran it and the file was written to disk before that version is treated as the authoritative file for any downstream process including code review. |
+| 2026-07-27 | TypeScript selected for server layer — JavaScript scaffold to be converted | Server scaffold was initially written in plain JavaScript. TypeScript is correct for consistency with Angular frontend and developer work environment. Agent 4 directed to convert before any API routes are written. Knex and Express both support TypeScript natively. |
+| 2026-07-27 | Builder agent prompts must explicitly specify language not just framework | Phase 2 Builder defaulted to JavaScript because the prompt said Node.js and Express without specifying TypeScript. Standing rule: all future builder agent prompts must state the language explicitly for every layer being built. |
 
 ---
 
