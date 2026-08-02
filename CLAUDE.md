@@ -88,3 +88,5 @@ Significant decisions and phase completions are expected to be recorded in `SOUR
 **Last Updated date discipline** — every Claude Code command that modifies `SOURCE_OF_TRUTH.md` must include updating the Last Updated date field to today's date as part of the same commit. No exceptions. This is not optional and does not depend on the type of change being made. A `SOURCE_OF_TRUTH.md` commit without a Last Updated date update is incomplete.
 
 **Knex migration workflow** — when migration files are produced by a builder agent, Claude Code writes them to `/server/migrations/` in approval mode and commits them to GitHub. Claude Code does not run `knex migrate:latest` or any database commands. That step belongs to the developer via RDP on the live server.
+
+**Decisions Log date discipline** — never infer the date for a Decisions Log entry from the document context. Always use the date explicitly provided by PM in the command. If no date is provided in the command ask PM for today's date before writing the entry.
