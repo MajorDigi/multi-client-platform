@@ -108,3 +108,19 @@ No record is ever hard-deleted from MySQL. Every relevant record (engagements, a
 - Dashboard and entry-grid components must be built generically (driven by question `type`), not hardcoded per client — this is required for the "one platform, many clients" model to hold.
 - Data Integrity Model (Section 5) is a hard constraint on endpoint design, not a nice-to-have — no edit/delete endpoint should ever be built against `finalized` data.
 - Two seed datasets (LIFT Session 1 — April 27, 2026, 8 respondents; LIFT Session 2 — June 15, 2026, 15 respondents) are available to load into the question-bank/respondent/response schema at launch, once the schema is implemented.
+
+---
+
+## Data Model — Seven Table Schema
+
+The platform uses seven tables.
+
+- **programs** — standalone global table, no client_id, shared across all client organizations.
+- **clients** — standalone table, no foreign keys in.
+- **sessions** — the join table linking a client to a program for a specific engagement. `client_id` references `clients.id`, `program_id` references `programs.id`.
+- **questions** — scoped to a client via `client_id` references `clients.id`. Not scoped to a session — this allows one question set to be reused across all sessions a client has without duplicating question rows.
+- **options** — scoped to a question via `question_id` references `questions.id`.
+- **respondents** — scoped to a session via `session_id` references `sessions.id`.
+- **responses** — the answer table with three foreign keys: `respondent_id` references `respondents.id`, `question_id` references `questions.id`, `option_id` references `options.id` — nullable, populated only for multiple choice answers, null for open text where `answer_text` is used instead.
+
+**Key query pattern:** engagement data is retrieved by joining sessions to respondents to responses. There is no `session_id` on questions or responses directly. Questions connect to sessions only indirectly through the client relationship.
