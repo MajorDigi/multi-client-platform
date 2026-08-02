@@ -100,8 +100,9 @@ Before every builder agent opens, PM must complete this audit. This is not optio
 5. **Repo structure confirmed** — confirm Section 9 repo structure is defined and locked for the phase about to open.
 6. **Open Questions reviewed** — confirm no open question in Section 14 is blocking the phase about to open.
 7. **Agent 1 BA/UX sign-off confirmed** — confirm any scope additions or changes discovered since the last phase have been reviewed with Agent 1 before the builder receives them.
+8. **Credential inventory** — before Phase 2 Builder opens, PM must confirm: (a) what credentials the phase requires — database passwords, API keys, connection strings, (b) when and where those credentials were created — typically during Kickoff, (c) where they are stored — password manager, never in any project file, (d) how they reach each environment — local .env created manually by developer, server .env created independently via RDP, never transferred through GitHub. This inventory must be completed before the builder agent receives its kickoff prompt. A credential gap discovered mid-phase costs significantly more time than one surfaced in planning.
 
-If any of these seven items is not clean stop and resolve it before opening the builder agent.
+If any of these eight items is not clean stop and resolve it before opening the builder agent.
 
 ---
 
