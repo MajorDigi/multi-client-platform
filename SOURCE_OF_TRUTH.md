@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-07-26
+**Last Updated:** 2026-07-27
 **Status:** In Development — Phase 2 In Progress
 
 ---
@@ -184,6 +184,7 @@ The section is never deleted — cleared state is preserved as a record that ite
 | 35 | Knex.js migrations added to Phase 2 scope | Agent 4 | Phase 2 Builder installs Knex.js as npm package in /server alongside mysql2. Creates migration files in /server/migrations/. First migration builds all seven schema tables in correct INSERT order per LIFT-DATA-MAPPING.md. Replaces manual MySQL Workbench SQL execution. Free open source MIT license. No server infrastructure changes needed. Developer runs knex migrate:latest via RDP at deployment time. |
 | 36 | CLI-ready instruction format — add to methodology standards | PM | Builder agents package Claude Code handoffs as a single copy-paste-ready block: plain-language instructions at the top describing what to create and what to hold off on, followed by full file contents inline. One block, no assembly required on the developer's end. Eliminates friction from prose-described files spread across multiple messages. Apply consistently across all builder agents going forward. Add to PROJECT-READINESS.md as a standing builder agent standard. |
 | 37 | Pre-commit hook for Last Updated date — Web Lab methodology improvement | PM | A git pre-commit hook that automatically updates the Last Updated date in SOURCE_OF_TRUTH.md whenever that file is staged for commit is the correct long-term enforcement mechanism. Removes human and agent memory dependency entirely. Add to future Web Lab project Kickoff as a standard repo configuration step alongside .gitignore and CLAUDE.md setup. |
+| 38 | Schema handoff document — produce after Steps 6-8 confirm migration successful | Agent 8 Documentation | After knex migrate:latest runs successfully and seven tables are confirmed in MySQL, Documentation Agent produces docs/SCHEMA-HANDOFF.md covering: what each table does and why it exists, how to onboard a new client — what rows to add and in what order, how to add a new question set for an existing client, how to add new options to an existing question, how the response_id unanswered_count and unanswered_fields fields work in practice, and a worked example using LIFT The Tri-State as the reference client. Written for the developer not for a technical team — practical step by step not academic. |
 
 ---
 
