@@ -86,6 +86,7 @@ These rules apply to every Web Lab project from day one and must be verified bef
 3. **README sync discipline** — the README Build Status table must stay in sync with the SOURCE_OF_TRUTH.md Phase Status table. They update together in the same commit on every phase change.
 4. **Pre-project rule audit** — before Phase 1 Builder opens on any future Web Lab project, PM must audit all agent rules for narrow-scope gaps and stress-test them against realistic edge cases.
 5. **Internal session checklist discipline** — every agent kickoff prompt must include this instruction: "Maintain an internal checklist during this session capturing: new conventions discovered, friction points and how they were resolved, observations about what worked better or worse than expected, and any minor self-resolved deviations from spec. Include this checklist in your final status report to PM." This applies to all agents that produce substantive work — builders, assembler, QA, documentation, code review. Consultation Agent is exempt since its outputs go to STRATEGY-LOG.md directly.
+6. **Language specification in builder prompts** — builder agent prompts must explicitly state the programming language for every layer being built, not just the framework. Example: do not say Node.js and Express, say Node.js and Express in TypeScript. Implied language choices are not sufficient — the builder will default to its own judgment which may conflict with the project stack.
 
 ---
 
