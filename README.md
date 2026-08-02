@@ -68,7 +68,7 @@ This is a real-time status, not a snapshot — check `SOURCE_OF_TRUTH.md` for th
 │   ├── BA-UX-SPEC.md
 │   ├── PM-SESSION-01.md
 │   ├── ENVIRONMENT-SETUP.md
-│   ├── PHASE-1-COMPLETE.md   (once Phase 1 completes)
+│   ├── PHASE-1-COMPLETE.md
 │   ├── PHASE-2-COMPLETE.md
 │   └── PHASE-3-COMPLETE.md
 ├── /phase-1                  ← Phase 1 code
