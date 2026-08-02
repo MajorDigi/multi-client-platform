@@ -1,5 +1,5 @@
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
 
@@ -11,4 +11,4 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-module.exports = app;
+export default app;
