@@ -119,6 +119,10 @@ If less than 24 hours have passed, state:
 
 No agent proceeds with any work until this check is complete and reported. This rule cannot be overridden.
 
+**Paste Fallback Rule**
+
+When the raw GitHub URL fetch returns a stale cached version and the developer pastes the document directly, treat the pasted document as authoritative regardless of its internal Last Updated date. The developer's paste supersedes the date check. If the pasted document's Last Updated date is more than 24 hours old, ask one clarifying question only: "Was this document updated today — if so please paste the latest version. If not, I will proceed with this copy." One question, one answer, proceed. Do not block work waiting for a perfect date match. The paste is the resolution to the fetch failure — treat it as such.
+
 ---
 
 ## 7. PM Radar
