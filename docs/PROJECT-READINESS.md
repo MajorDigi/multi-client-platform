@@ -102,8 +102,9 @@ Before every builder agent opens, PM must complete this audit. This is not optio
 6. **Open Questions reviewed** — confirm no open question in Section 14 is blocking the phase about to open.
 7. **Agent 1 BA/UX sign-off confirmed** — confirm any scope additions or changes discovered since the last phase have been reviewed with Agent 1 before the builder receives them.
 8. **Credential inventory** — before Phase 2 Builder opens, PM must confirm: (a) what credentials the phase requires — database passwords, API keys, connection strings, (b) when and where those credentials were created — typically during Kickoff, (c) where they are stored — password manager, never in any project file, (d) how they reach each environment — local .env created manually by developer, server .env created independently via RDP, never transferred through GitHub. This inventory must be completed before the builder agent receives its kickoff prompt. A credential gap discovered mid-phase costs significantly more time than one surfaced in planning.
+9. **Builder prompt quality check** — before issuing any builder agent kickoff prompt PM reviews the prompt explicitly for: (a) language specified for every layer being built — not just framework, (b) file structure confirmed against Section 9, (c) credentials and environment variables explicitly addressed, (d) reference documents named — ARCHITECTURE-BRIEF.md, LIFT-DATA-MAPPING.md, BA-UX-SPEC.md as applicable. A builder prompt that omits any of these is incomplete and must be revised before sending. This check prevents builder agents from making unilateral decisions on items that should be PM-directed.
 
-If any of these eight items is not clean stop and resolve it before opening the builder agent.
+If any of these nine items is not clean stop and resolve it before opening the builder agent.
 
 ---
 
