@@ -373,6 +373,7 @@ This workflow executes every time a new database migration is needed.
 
 - **Step 1** — Agent 4 Phase 2 Builder writes the migration file content in chat.
 - **Step 2** — Developer reviews the migration file.
+- **Step 2a** — Developer confirms file is on disk and matches reviewed content — Claude Code reads the file and developer verifies the output matches exactly what was reviewed before any downstream process treats the review verdict as attached to that file.
 - **Step 3** — Claude Code writes the file to /server/migrations/ in approval mode.
 - **Step 4** — Developer approves the file write.
 - **Step 5** — Claude Code commits and pushes to GitHub.
@@ -380,7 +381,7 @@ This workflow executes every time a new database migration is needed.
 - **Step 7** — Developer runs knex migrate:latest in the server terminal.
 - **Step 8** — MySQL schema is created or updated.
 
-**Rules:** No agent runs terminal commands on the live server. Developer owns Steps 2, 4, 6, 7, and 8. Agent 4 owns Step 1. Claude Code owns Steps 3 and 5.
+**Rules:** No agent runs terminal commands on the live server. Developer owns Steps 2, 2a, 4, 6, 7, and 8. Agent 4 owns Step 1. Claude Code owns Steps 2a, 3, and 5.
 
 ### .env File Creation Workflow
 
