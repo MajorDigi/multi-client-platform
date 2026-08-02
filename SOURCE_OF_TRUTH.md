@@ -337,6 +337,7 @@ No exceptions. No skipping steps.
 | 2026-07-26 | MySQL CLI path on server — full path required | mysql.exe is not in PowerShell PATH on the AWS Lightsail Windows Server. Full path required: C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe. Applies to any future session requiring direct MySQL CLI access via RDP. |
 | 2026-07-26 | programs table is standalone global — no client_id | programs is shared across all client organizations. sessions is the join point carrying both client_id and program_id. questions scope to clients not sessions allowing question reuse across multiple engagements. responses connect to sessions only indirectly through respondents. This FK chain was implicit in LIFT-DATA-MAPPING.md and absent from ARCHITECTURE-BRIEF.md — both documents updated to reflect this explicitly. |
 | 2026-07-26 | sessions.session_date is the canonical column name | date is a reserved word in MySQL and risky as a bare column name. session_date confirmed as canonical by Agent 1. Use session_date consistently in migration files, import scripts, and all API queries. |
+| 2026-07-26 | respondents.response_id typed as integer not string | LIFT CSV confirms response_id values are plain integers 1 2 3. Integer type chosen for cleaner sorting filtering and consistency with source data. |
 
 ---
 
