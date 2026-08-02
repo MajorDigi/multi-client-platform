@@ -338,6 +338,7 @@ No exceptions. No skipping steps.
 | 2026-07-26 | programs table is standalone global — no client_id | programs is shared across all client organizations. sessions is the join point carrying both client_id and program_id. questions scope to clients not sessions allowing question reuse across multiple engagements. responses connect to sessions only indirectly through respondents. This FK chain was implicit in LIFT-DATA-MAPPING.md and absent from ARCHITECTURE-BRIEF.md — both documents updated to reflect this explicitly. |
 | 2026-07-26 | sessions.session_date is the canonical column name | date is a reserved word in MySQL and risky as a bare column name. session_date confirmed as canonical by Agent 1. Use session_date consistently in migration files, import scripts, and all API queries. |
 | 2026-07-26 | respondents.response_id typed as integer not string | LIFT CSV confirms response_id values are plain integers 1 2 3. Integer type chosen for cleaner sorting filtering and consistency with source data. |
+| 2026-07-26 | CLI-ready block confirmation loop must be explicitly closed | A migration file fix was generated in chat and sent to Agent 9 for review but the CLI-ready block was never executed through Claude Code — the file on disk did not match the reviewed version. Standing rule: every CLI-ready block must be followed by an explicit developer confirmation that Claude Code ran it and the file was written to disk before that version is treated as the authoritative file for any downstream process including code review. |
 
 ---
 
