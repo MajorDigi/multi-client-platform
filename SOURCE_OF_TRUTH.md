@@ -324,6 +324,7 @@ No exceptions. No skipping steps.
 | 2026-07-19 | CSV bulk import feature added to V1 scope | Every client engagement produces data outside the platform first. A CSV import capability is a core V1 feature — not a nice-to-have. Handles existing data backlog and future client onboarding. Phase 2 Builder implements it alongside the admin data entry grid. |
 | 2026-07-19 | Existing LIFT Session 1 and Session 2 data migration in scope for V1 | Two existing datasets acknowledged in ARCHITECTURE-BRIEF.md Section 7. Data will be exported from Claude as CSV, reshaped to match flexible question-bank schema via an Agent 1 mapping session, and imported through the new CSV import feature in Phase 2. Developer performs the migration. Phase 2 Builder builds the import tool. |
 | 2026-07-25 | Knex.js selected as query builder and migration tool for Phase 2 | Free open source MIT license, no cost. Installs as npm package alongside mysql2. Handles schema migrations via versioned migration files in /server/migrations/ — replaces manual SQL execution in MySQL Workbench. Consistent with Node.js Express stack, supports MySQL natively. |
+| 2026-07-26 | Node.js Express API runs on port 3000 | No conflict with IIS on port 80 or Angular dev server on port 4200. IIS reverse proxies /api/* to localhost:3000. Common Node convention, clean separation of concerns. |
 
 ---
 
