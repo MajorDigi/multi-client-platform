@@ -328,6 +328,7 @@ No exceptions. No skipping steps.
 | 2026-07-25 | Knex.js selected as query builder and migration tool for Phase 2 | Free open source MIT license, no cost. Installs as npm package alongside mysql2. Handles schema migrations via versioned migration files in /server/migrations/ — replaces manual SQL execution in MySQL Workbench. Consistent with Node.js Express stack, supports MySQL natively. |
 | 2026-07-26 | Node.js Express API runs on port 3000 | No conflict with IIS on port 80 or Angular dev server on port 4200. IIS reverse proxies /api/* to localhost:3000. Common Node convention, clean separation of concerns. |
 | 2026-07-26 | Credential inventory added as required pre-Phase 2 step | Phase 2 Builder discovered that platform_app MySQL password from Kickoff was never explicitly handed off or sequenced into Phase 2 build steps. Gap documented. Credential inventory added to pre-phase audit checklist to prevent recurrence in this and all future Web Lab projects. |
+| 2026-07-26 | MySQL port 3306 stays closed externally — credential verification via RDP only | Port 3306 is not and will not be opened to external connections. This enforces the locked architecture: nothing talks to MySQL except Node, and Node connects via localhost internally. Developer credential verification performed via RDP session on the server using MySQL CLI or Workbench running locally on the server. No direct remote MySQL connections from developer's local machine. |
 
 ---
 
