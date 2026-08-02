@@ -85,6 +85,7 @@ These rules apply to every Web Lab project from day one and must be verified bef
 2. **Rule scope discipline** — every agent rule must be written to cover all scenarios it applies to, not just the most obvious one. When a rule gap is discovered mid-project it must be fixed immediately and logged as a methodology learning.
 3. **README sync discipline** — the README Build Status table must stay in sync with the SOURCE_OF_TRUTH.md Phase Status table. They update together in the same commit on every phase change.
 4. **Pre-project rule audit** — before Phase 1 Builder opens on any future Web Lab project, PM must audit all agent rules for narrow-scope gaps and stress-test them against realistic edge cases.
+5. **Internal session checklist discipline** — every agent kickoff prompt must include this instruction: "Maintain an internal checklist during this session capturing: new conventions discovered, friction points and how they were resolved, observations about what worked better or worse than expected, and any minor self-resolved deviations from spec. Include this checklist in your final status report to PM." This applies to all agents that produce substantive work — builders, assembler, QA, documentation, code review. Consultation Agent is exempt since its outputs go to STRATEGY-LOG.md directly.
 
 ---
 
