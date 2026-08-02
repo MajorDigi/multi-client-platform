@@ -145,7 +145,7 @@ When all items are resolved this section updates to:
 The section is never deleted — cleared state is preserved as a record that items were tracked and intentionally closed, not abandoned.
 
 ### Current Radar Status
-🔴 Items on radar as of 2026-07-25
+🔴 Items on radar as of 2026-08-02
 
 | # | Item | Owner | Notes |
 |---|------|-------|-------|
