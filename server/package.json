@@ -1,0 +1,17 @@
+{
+  "name": "multi-client-platform-api",
+  "version": "1.0.0",
+  "description": "Node.js Express API for the Multi-Client Data Aggregation & Display Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0",
+    "knex": "^3.1.0",
+    "dotenv": "^16.4.5",
+    "cors": "^2.8.5"
+  }
+}
