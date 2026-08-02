@@ -36,7 +36,7 @@ First client: LIFT The Tri-State — a workforce development program in Cincinna
 | Version Control | GitHub | Bridge between local and server, source of truth for all agents |
 | Server | AWS Lightsail (Windows Server 2022) | Hosts everything, publicly accessible, $22/month flat rate, Ohio us-east-2a<br>**Note:** RDP access via mstsc — enter 18.220.214.171 directly, password from Lightsail console Connect tab. No .rdp file available. |
 | Web Server | IIS + URL Rewrite + ARR | Front door, serves Angular app, reverse proxies to Node |
-| API | Node.js + Express | Business logic, queries MySQL, never exposed directly |
+| API | Node.js + Express + TypeScript | Business logic, queries MySQL, never exposed directly |
 | Database | MySQL | Data storage on AWS Lightsail VM, only Node talks to it |
 | Frontend | Angular + TypeScript + Tailwind CSS | What the user sees, served as static files by IIS |
 
