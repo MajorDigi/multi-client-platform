@@ -18,6 +18,8 @@ Seven tables, consistent with the flexible question-bank model locked in `ARCHIT
 - **respondents** — one row per anonymous participant within a session. Carries `response_id`, `role_type`, and denormalized completion fields.
 - **responses** — one row per answer: links a respondent to a question, with either an `option_id` (multiple choice) or free-text `answer_text` (open text).
 
+**FK constraint clarification:** programs is a standalone global table with no client_id. sessions carries both client_id and program_id as foreign keys — this is the join point between a client organization and a program. questions scope to clients not sessions — this allows one question set to be reused across all sessions a client has. responses connect to sessions only indirectly through respondents.session_id not directly.
+
 ---
 
 ## 2. Column-by-Column Mapping
