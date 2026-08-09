@@ -421,6 +421,23 @@ This workflow runs every time new code needs to be deployed to the AWS Lightsail
 
 **Note on data entry** — once the admin data entry grid is built routine data entry happens through the browser UI and does not require RDP or git pull. RDP and git pull are only needed when application code changes.
 
+### IIS Configuration File Update Workflow
+
+The IIS web.config file exists in two separate locations that must both be updated manually — there is no automatic sync between them.
+
+- **Location 1** — /deployment/iis-config/web.config in the Git repo — this is the version-controlled copy committed to GitHub.
+- **Location 2** — C:\inetpub\client\web.config on the server — this is the physical file IIS actually reads.
+
+Git push and git pull only touch Location 1. IIS has no knowledge of GitHub and will silently continue serving old rules from Location 2 until it is manually overwritten.
+
+Every future change to IIS configuration requires three explicit steps in order:
+
+- **Step 1** — Edit the file locally, commit and push to GitHub.
+- **Step 2** — RDP into the server and run git pull in C:\apps\multi-client-platform to update the repo copy.
+- **Step 3** — Run Copy-Item C:\apps\multi-client-platform\deployment\iis-config\web.config C:\inetpub\client\web.config -Force to overwrite the live IIS copy.
+
+There is no restart required — IIS picks up web.config changes immediately. But if Step 3 is skipped IIS silently serves old rules with no error message. All three steps are required every time.
+
 ### .env File Creation Workflow
 
 Two .env files are required at two different points in Phase 2. Neither is ever committed to GitHub.
