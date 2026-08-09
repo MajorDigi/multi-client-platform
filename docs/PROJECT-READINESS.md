@@ -20,6 +20,9 @@ Status below reflects this project (multi-client-platform) as of the Pre-Kickoff
 - [x] GitHub repository created
 - [x] Repository visibility decision made and recorded (public, to support unauthenticated raw-URL agent access)
 - [ ] Personal Access Token (PAT) generated, scoped to repo only, stored securely (not in repo)
+
+**GitHub Personal Access Token** — when creating the personal access token during Kickoff set expiration to No Expiration for any project expected to run longer than 30 days. A short-lived token will expire mid-build and require regeneration, interrupting the workflow. Repo scope only is sufficient.
+
 - [x] Repository cloned locally
 - [x] `.gitignore` in place covering secrets, dependencies, and build output
 - [x] No secrets committed (verified before each commit)

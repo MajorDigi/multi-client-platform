@@ -1,7 +1,7 @@
 # SOURCE OF TRUTH
 ### Multi-Client Data Aggregation & Display Platform
 **Maintained by:** Project Manager Agent (Agent 2)
-**Last Updated:** 2026-08-02
+**Last Updated:** 2026-08-03
 **Status:** In Development — Phase 2 In Progress
 
 ---
@@ -349,6 +349,7 @@ No exceptions. No skipping steps.
 | 2026-08-02 | Decisions Log date corrections applied | Multiple entries were dated using document context rather than actual session date. Corrected to reflect actual dates work was performed. Rule 14 and CLAUDE.md updated to prevent recurrence. |
 | 2026-08-02 | Local MySQL connection testing skipped — architectural constraint | platform_app user exists only on the server MySQL instance. Local Express server cannot reach server MySQL because port 3306 is closed externally per architecture decision. Pool code verified correct by Agent 9 code review and credentials verified directly on server via RDP. First live connection test happens on server where localhost resolves correctly. Steps 6-8 of Knex Migration Workflow moved up as next action. |
 | 2026-08-02 | Server deployment via Git clone chosen over manual file transfer | Rather than transferring built files via RDP clipboard, server deployment uses Git — clone the repo on the server, npm install, knex migrate:latest. Keeps server in sync with GitHub, repeatable, no manual file management. |
+| 2026-08-03 | GitHub PAT expiration — set to no expiration for project-duration tokens | Initial vscode-connection token was created with a 30-day expiration and expired mid-build requiring regeneration at 11:30 PM. Future projects should set GitHub personal access tokens to no expiration when the project is expected to run longer than 30 days. Repo scope only is sufficient for Claude Code git operations. |
 
 ---
 
