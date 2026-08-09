@@ -114,6 +114,16 @@ If any of these nine items is not clean stop and resolve it before opening the b
 
 ---
 
+## The Developer's Role in Methodology Improvement
+
+The developer is not just an executor of agent instructions. The developer is the most important observational layer in the Web Lab methodology — the one layer no agent can replace. Agents catch things within their defined scope. The developer catches things that fall between scopes: in the gaps between agents, in the human experience of actually executing the work, and in the big picture view that no single agent holds.
+
+Standing principle: when something feels wrong, unclear, undocumented, or surprising — bring it forward to PM. Do not assume an agent will catch it. Do not assume it is already documented. Err on the side of over-communicating. The cost of flagging something unnecessary is one short conversation. The cost of missing something is compounding methodology debt that surfaces later at higher cost.
+
+Every significant methodology improvement in the first Web Lab build came from the developer noticing something and bringing it forward — the JavaScript to TypeScript gap, the .env display risk, the RDP terminal echo risk, the inter-agent communication loop problem, the decisions log date drift, the web.config dual-location gap. None of these were caught by agents operating within their defined scope alone. They were caught because the developer was paying attention and speaking up. That is the standard for every future Web Lab project.
+
+---
+
 ## Tool Execution Workflows
 
 For any project using Knex.js or a similar migration tool, document the full execution workflow before Phase 2 Builder opens. The workflow must clearly define: who writes the migration file, who reviews it, who commits it, who executes it on the server, and who confirms the result. No step in the workflow should be ambiguous about ownership.
