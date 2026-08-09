@@ -357,6 +357,7 @@ No exceptions. No skipping steps.
 | 2026-08-03 | REFERENCES privilege required for platform_migrator — added to grant list | MySQL requires REFERENCES privilege specifically for foreign key constraints, separate from ALTER. Not included in initial grant list. Added to platform_migrator grants before migration retry. Standing note: future migrations using foreign keys require REFERENCES in the migration user grant list. |
 | 2026-08-03 | Knex migrations must run as platform_migrator not platform_app | platform_app correctly scoped to runtime privileges only. platform_migrator holds schema modification rights. This separation is intentional and permanent. All future migrations use platform_migrator credentials via environment variable override. |
 | 2026-08-03 | Schema handoff document triggered — seven tables confirmed live on server | All seven application tables confirmed in MySQL on AWS Lightsail server after successful knex migrate:latest run. Documentation Agent to produce SCHEMA-HANDOFF.md per PM Radar row 38. |
+| 2026-08-03 | Credential detection safety protocol added to all agents | If any agent detects a potential credential value in developer input it must immediately stop work, not repeat or act on the value, notify the developer, and route to PM for exposure assessment before any further work. Standing protocol added to CLAUDE.md. |
 
 ---
 
