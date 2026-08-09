@@ -46,7 +46,7 @@ QR-code self-entry was deliberately scoped out of V1 (logged as a candidate for 
 | Environment Setup (Kickoff) | ✅ Complete — AWS Lightsail provisioned, IIS/Node/MySQL installed and verified |
 | BA/UX Spec | ✅ Complete |
 | Phase 1 — Static Hosting | ✅ Complete — Angular app served via IIS, externally verified |
-| Phase 2 — API + Reverse Proxy | 🟡 In Progress |
+| Phase 2 — API + Reverse Proxy | 🟡 In Progress — reverse proxy verified, core API routes next |
 | Phase 3 — Auth + TLS + Public Link | ⬜ Not Started |
 | Final Assembly | ⬜ Not Started |
 
