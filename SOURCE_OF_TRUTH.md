@@ -416,6 +416,7 @@ This workflow runs every time new code needs to be deployed to the AWS Lightsail
 - **Step 5** — Developer runs git pull to pull latest changes from GitHub.
 - **Step 6** — If schema changed run knex migrate:latest.
 - **Step 7** — If package.json dependencies changed run npm install.
+- **Step 7a** — If TypeScript source files changed or this is the first deployment run npm run build in the server directory to compile TypeScript to dist/. The Node process runs from dist/server.js not from source files directly. npm start will fail with MODULE_NOT_FOUND if dist/ does not exist or is stale.
 - **Step 8** — Restart the Node process.
 - **Step 9** — Verify the app is serving correctly via Test-NetConnection or browser check.
 
