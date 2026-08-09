@@ -355,6 +355,7 @@ No exceptions. No skipping steps.
 | 2026-08-03 | Git not pre-installed on server — gap in Kickoff checklist | Git was not installed on the AWS Lightsail Windows Server during Kickoff because deployment method was not yet determined at that time. Deployment method later changed to git clone requiring Git on server. Future Web Lab projects using git-based server deployment must include Git for Windows installation as a Kickoff step. |
 | 2026-08-03 | Separate MySQL migration user created — platform_migrator | platform_app is correctly scoped to SELECT INSERT UPDATE DELETE for runtime queries. Knex migrations require CREATE ALTER DROP INDEX privileges which platform_app was never granted. Solution: separate platform_migrator user with schema modification rights used only via RDP for running knex migrate:latest. platform_app runtime privileges unchanged. This follows the principle of least privilege — runtime user and migration user are separate credentials with separate scopes. |
 | 2026-08-03 | REFERENCES privilege required for platform_migrator — added to grant list | MySQL requires REFERENCES privilege specifically for foreign key constraints, separate from ALTER. Not included in initial grant list. Added to platform_migrator grants before migration retry. Standing note: future migrations using foreign keys require REFERENCES in the migration user grant list. |
+| 2026-08-03 | Knex migrations must run as platform_migrator not platform_app | platform_app correctly scoped to runtime privileges only. platform_migrator holds schema modification rights. This separation is intentional and permanent. All future migrations use platform_migrator credentials via environment variable override. |
 
 ---
 
@@ -398,6 +399,8 @@ This workflow executes every time a new database migration is needed.
 - **Step 8** — MySQL schema is created or updated.
 
 **Rules:** No agent runs terminal commands on the live server. Developer owns Steps 2, 3a, 4, 6, 7, and 8. Agent 4 owns Step 1. Claude Code owns Steps 3, 3a, and 5.
+
+**Migration user note** — knex migrate:latest must be run using platform_migrator credentials not platform_app credentials. platform_app is scoped to SELECT INSERT UPDATE DELETE only and lacks CREATE ALTER DROP INDEX REFERENCES privileges required for schema migrations. Use the environment variable override: $env:DB_USER='platform_migrator'; $env:DB_PASSWORD='[from password manager]'; npx knex migrate:latest — credentials are never written to any file.
 
 ### Server Deployment and Update Workflow
 
