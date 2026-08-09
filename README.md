@@ -89,3 +89,5 @@ Build decisions, stack choices, agent rules, phase status, and decisions log ent
 The boundary is enforced mechanically via .gitignore, not just intentionally. The structure protects itself.
 
 Most projects have information boundaries. Few design them explicitly. This one does.
+
+One practical security note for developers adopting this workflow: Claude Code has read access to all files in the project directory, including .env files containing live credentials. Two safeguards are non-negotiable — .env files must be listed in .gitignore before any code is written, and CLAUDE.md must explicitly instruct Claude Code never to display .env file contents in terminal output. Both are in place in this project. Neither is optional.
