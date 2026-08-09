@@ -70,6 +70,7 @@ This is a hard rule, not a suggestion:
 - Config that includes real secrets belongs in untracked local files (`.env`) or Azure/IIS-side configuration on the VM — never in tracked source, docs, or commit messages.
 - If a secret is ever accidentally committed, treat it as compromised (rotate/revoke it) rather than just deleting it from the latest commit — it remains in git history.
 - Rely on `.gitignore` to keep secret-shaped files untracked, but don't treat `.gitignore` alone as sufficient — still check diffs before committing, since a secret can be pasted into a tracked file.
+- Never read, display, echo, log, or include the contents of any `.env` file in output or responses. `.env` files contain live credentials and must never appear in terminal output, chat messages, or commit diffs. If a task requires `.env` file values ask the developer to confirm only the non-sensitive fields. Treat all `.env` contents as strictly confidential.
 
 ## GitHub URL Standards
 
