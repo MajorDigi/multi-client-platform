@@ -394,6 +394,22 @@ This workflow executes every time a new database migration is needed.
 
 **Rules:** No agent runs terminal commands on the live server. Developer owns Steps 2, 3a, 4, 6, 7, and 8. Agent 4 owns Step 1. Claude Code owns Steps 3, 3a, and 5.
 
+### Server Deployment and Update Workflow
+
+This workflow runs every time new code needs to be deployed to the AWS Lightsail server.
+
+- **Step 1** — Write or update code locally.
+- **Step 2** — Claude Code commits and pushes to GitHub with developer approval.
+- **Step 3** — Developer RDPs into the server at 18.220.214.171.
+- **Step 4** — Developer navigates to the repo folder on the server.
+- **Step 5** — Developer runs git pull to pull latest changes from GitHub.
+- **Step 6** — If schema changed run knex migrate:latest.
+- **Step 7** — If package.json dependencies changed run npm install.
+- **Step 8** — Restart the Node process.
+- **Step 9** — Verify the app is serving correctly via Test-NetConnection or browser check.
+
+**Note on data entry** — once the admin data entry grid is built routine data entry happens through the browser UI and does not require RDP or git pull. RDP and git pull are only needed when application code changes.
+
 ### .env File Creation Workflow
 
 Two .env files are required at two different points in Phase 2. Neither is ever committed to GitHub.
