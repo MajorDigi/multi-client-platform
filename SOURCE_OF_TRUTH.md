@@ -412,7 +412,7 @@ This workflow runs every time new code needs to be deployed to the AWS Lightsail
 - **Step 1** — Write or update code locally.
 - **Step 2** — Claude Code commits and pushes to GitHub with developer approval.
 - **Step 3** — Developer RDPs into the server at 18.220.214.171.
-- **Step 4** — Developer navigates to the repo folder on the server.
+- **Step 4** — Developer navigates to the repo folder on the server at C:\apps\multi-client-platform.
 - **Step 5** — Developer runs git pull to pull latest changes from GitHub.
 - **Step 6** — If schema changed run knex migrate:latest.
 - **Step 7** — If package.json dependencies changed run npm install.
